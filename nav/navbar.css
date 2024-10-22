@@ -5,7 +5,7 @@
   }
   
   body {
-    font-family:'Abhaya Libre', sans-serif;
+    font-family: 'Abhaya Libre', sans-serif;
     background-color: #f0f0f0;
     font-weight: 600;
   }
@@ -14,18 +14,17 @@
     background-color: #0a3469;
     padding: 10px 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
   
   .logo {
     display: flex;
     align-items: center;
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; 
     padding: 6px 10px; 
     border-radius: 20px; 
     border: 1px solid #ccc; 
-    margin-right: 95px;
   }
   
   .logo img {
@@ -35,23 +34,34 @@
   }
   
   .brand-name {
+    color: #000000;
+    font-family: 'Abhaya Libre', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
     display: flex; 
     align-items: center; 
-}
-
-.brand-name .pens {
+  }
+  
+  .brand-name .pens {
     color: rgb(0, 0, 0);
     text-decoration: none; 
     font-weight: bold; 
     font-size: 24px; 
-}
-
-.brand-name .news {
+  }
+  
+  .brand-name .news {
     color: rgb(2, 23, 31); 
     text-decoration: none; 
     font-weight: bold; 
     font-size: 24px; 
-}
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
   nav ul li {
     margin-right: 10px;
   }
@@ -62,6 +72,7 @@
     background-color: #d1d1d1;
     padding: 10px 20px;
     border-radius: 20px;
+    position: relative; 
     transition: background-color 0.3s;
   }
   
@@ -70,58 +81,11 @@
   }
   
   nav ul li a.active {
-    background-color: #0c5975;
-    color: #fff;
+    background-color: #1fc3e8;
+    color: #000f;
   }
   
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 50px; 
-    height: auto;
-    margin-right: 20px;
-}
-
-.brand-name {
-    color: #000000;
-    font-family:'Abhaya Libre', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-   display: flex;
-   gap: 25px;
-}
-
-nav ul li {
-    margin-right: 5px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #000;
-    background-color: #d1d1d1;
-    padding: 8px 15x;
-    border-radius: 20px;
-    position: relative; 
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #b0b0b0;
-}
-
-nav ul li a.active {
-    background-color: #1fc3e8;
-    color: #000;
-}
-
-nav ul li a::after {
+  nav ul li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -130,12 +94,13 @@ nav ul li a::after {
     height: 2px;
     background-color: rgb(245, 245, 245); 
     transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
+  }
+  
+  nav ul li a:hover::after {
     width: 100%; 
-}
-input[type="text"] {
+  }
+  
+  input[type="text"] {
     padding: 8px;
     border-radius: 20px;
     border: 1px solid #d1d1d1;

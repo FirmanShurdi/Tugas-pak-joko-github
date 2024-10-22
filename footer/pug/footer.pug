@@ -3,35 +3,29 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title PensNews Footer
+    title PensNews Contact
     link(rel="stylesheet" href="footer.css")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
-      crossorigin="anonymous" referrerpolicy="no-referrer")
-
   body
-    .footer
-      
-      .footer-section.logo-section
-        img(src="logo-pens.png" alt="PensNews Logo" class="logo")
+    .container
+      .logo-section
+        a(href="index.html")
+          img(src="https://i.im.ge/2024/10/13/k6iPsr.logo.png" alt="PensNews")
         p PensNews
-
-      .footercContainer
-        .socialicons
-          a(href="#")
-            i.fa-brands.fa-facebook
-          a(href="#")
-            i.fa-brands.fa-instagram
-          a(href="#")
-            i.fa-brands.fa-youtube
-          a(href="#")
-            i.fa-brands.fa-whatsapp
-
-      .footer-section.contact-us
-        h3 CONTACT US
-        p Jl. Another Universe
-        p 031-68714
-        p &copy; 2024
-
-    // Font Awesome for social media icons
-    script(src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous")
+      .info-section
+        .follow-us
+          h2 FOLLOW US
+          .social-links
+            a(href="https://facebook.com" target="_blank" class="social-icon")
+              img(src="https://i.ibb.co.com/BNC3j28/facebook-removebg-preview.png" alt="facebook")
+            a(href="https://instagram.com" target="_blank" class="social-icon")
+              img(src="https://i.ibb.co.com/BPKj2Ls/download-Photoroom.png" alt="instagram")
+            a(href="https://youtube.com" target="_blank" class="social-icon")
+              img(src="https://i.ibb.co.com/3pdH1h8/download-1-Photoroom.png" alt="youtube")
+            a(href="https://whatsapp.com" target="_blank" class="social-icon")
+              img(src="https://i.ibb.co.com/bsYZnWh/download-1-Photoroom-1.png" alt="whatsapp")
+        .contact-us
+          h2 CONTACT US
+          p JL. Another Universe
+          p 031-68714
+          p Copyright &copy;2024
+          p All Rights Reserved
