@@ -16,7 +16,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+    position: fixed; /* Menjadikan navbar tetap di posisi atas */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Agar selalu berada di atas elemen lain */
+}
   
   .logo {
     display: flex;
@@ -156,16 +160,16 @@
   }
   
 .marquee {
-    position: absolute; 
-    top: 10px; 
-    right: 10px; 
-    width: 280px; 
+    top: auto; /* Tidak perlu top karena kita akan gunakan bottom */
+    right: 20px; /* Jarak dari kanan */
+    bottom: 10px; /* Jarak dari bawah */
+    width: 50%; /* Lebar marquee */
     overflow: hidden;
     background-color: #0a3469;
     color: white;
     padding: 5px;
     border-radius: 10px;
-  }
+}
   
   .marquee p {
     display: inline-block;
@@ -181,6 +185,9 @@
       transform: translateX(-100%);
     }
   }
+  main, header {
+    margin-top: 60px; /* Menyesuaikan dengan tinggi navbar */
+}
   body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
