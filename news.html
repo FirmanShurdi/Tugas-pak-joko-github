@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PensNews - News</title>
+    <link rel="stylesheet" href="css/news.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html"
+          ><img
+            src="https://i.im.ge/2024/10/13/k6iPsr.logo.png"
+            alt="PensNews" /></a
+        ><span class="brand-name"
+          ><span class="pens">Pens</span><span class="news">News</span></span
+        >
+      </div>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li class="dropdown">
+          <a href="#">Indeks &#9662;</a>
+          <ul class="dropdown-content">
+            <li><a href="national.html">National</a></li>
+            <li><a href="international.html">International</a></li>
+            <li><a href="otomotif.html">Otomotif</a></li>
+            <li><a href="GayaHidup.html">Gaya Hidup</a></li>
+            <li><a href="ekonomi.html">Ekonomi</a></li>
+            <li><a href="Olahraga.html">Olahraga</a></li>
+            <li><a href="Hiburan.html">Hiburan</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">About Us &#9662;</a>
+          <ul class="dropdown-content">
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="Redaksi.html">Redaksi</a></li>
+            <li><a href="Visimisi.html">Visi Misi</a></li>
+            <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="Prestasi.html">Prestasi</a></li>
+            <li><a href="TeamOfServie.html">Team Of Service</a></li>
+            <li><a href="Disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Features &#9662;</a>
+          <ul class="dropdown-content">
+            <li><a href="podcastsystem.html">Podcast System</a></li>
+            <li><a href="SmartPopus.html">Smart Pop-Us</a></li>
+            <li><a href="Header.html">Header and Builder</a></li>
+            <li><a href="Livevisual.html">Live Visual Builder</a></li>
+            <li><a href="CloudLibrary.html">Cloud Library</a></li>
+          </ul>
+        </li>
+      </ul>
+      <input type="text" placeholder="Search" />
+    </nav>
+    <main>
+      <header>
+        <div class="header-content">
+          <div class="marquee">
+            <p>
+              PensNews merupakan sebuah website yang menyediakan sebuah berita
+              hangat dan menarik yang terdapat didalam negeri maupun diluar
+              negeri
+            </p>
+          </div>
+        </div>
+      </header>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img
+              alt="Soccer players on the field with a referee showing a yellow card"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/IXcxTPWXFuIVGtFDOU4DltXxekcb0bYBe0uUwSgvDWwFfeSOB.jpg"
+              width="600"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              alt="Two people wearing pink vests standing against a white background"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/XyOv7Kf0MOzgdqdAdRSNgsN7o6BkyQrVuzvHQhL737jhvXyJA.jpg"
+              width="600"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              alt="Event poster with text 'Jalan Sehat Bersama Ria Ricis' and images of people"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/UFPJKgNkAlYQHx2e9f4dyuhYeGl8xJyOCNYbtWQGGmqNe9SOB.jpg"
+              width="600"
+            />
+          </div>
+        </div>
+        <button class="carousel-control left" onclick="prevSlide()">◀</button
+        ><button class="carousel-control right" onclick="nextSlide()">▶</button>
+        <div class="carousel-indicators">
+          <button class="active" onclick="goToSlide(0)"></button
+          ><button onclick="goToSlide(1)"></button
+          ><button onclick="goToSlide(2)"></button>
+        </div>
+      </div>
+      <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+          const slides = document.querySelectorAll(".carousel-item");
+          const indicators = document.querySelectorAll(
+            ".carousel-indicators button"
+          );
+          if (index >= slides.length) {
+            currentSlide = 0;
+          } else if (index < 0) {
+            currentSlide = slides.length - 1;
+          } else {
+            currentSlide = index;
+          }
+          const offset = -currentSlide * 100;
+          document.querySelector(
+            ".carousel-inner"
+          ).style.transform = `translateX(${offset}%)`;
+          indicators.forEach((indicator, i) => {
+            indicator.classList.toggle("active", i === currentSlide);
+          });
+        }
+
+        function nextSlide() {
+          showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+          showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(index) {
+          showSlide(index);
+        }
+      </script>
+      <div class="containers">
+        <h1>News</h1>
+        <div class="news-grid">
+          <div class="news-item">
+            <a href="konser.html"
+              ><img
+                alt="Image of three people in red shirts speaking at a microphone"
+                height="200"
+                src="https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg"
+                width="250"
+              />
+              <h2>KPDIP: Pilkada Jakarta 2024 "not for sale"</h2></a
+            >
+            <p>
+              Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya.
+              Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan
+              Ulee Lheue menuju Sabang pada Sabtu (27/9/24).
+            </p>
+          </div>
+          <div class="news-item">
+            <a href="israel.html"
+              ><img
+                alt="Image of a person singing on stage with red lighting"
+                height="200"
+                src="https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg"
+                width="250"
+              />
+              <h2>Penyanyi Sukses Dalam Berkarir, Ini Rahasinya</h2></a
+            >
+            <p>
+              Sikembalinya serbuan militer, dapat diartikan sebagai kegiatan
+              mempertegas hubungan antara militer dan situasi dengan
+              kebrutalannya, seperti disaksikan DPRD. Sikembalinya ini bertujuan
+              untuk memperkuat serbuan dan mempercepat tali kekuasaan.
+            </p>
+          </div>
+          <div class="news-item">
+            <a href="jepang.html"
+              ><img
+                alt="Image of a person walking through rubble in Japan"
+                height="200"
+                src="https://storage.googleapis.com/a1aa/image/lSg9c5lESwJSGVSkWN5Tp2HjWjfZfOWbK8g5FPzxVNCk9tkTA.jpg"
+                width="250"
+              />
+              <h2>JEPANG PANIK BUYING</h2></a
+            >
+            <p>
+              Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat
+              mempersembahkan lagu "Blue Giant". Tim bergegas perlahan ke
+              belakang panggung, diperkirakan ingin memastikan aksi.
+            </p>
+          </div>
+          <div class="news-item">
+            <a href="bupati.html"
+              ><img
+                alt="Image of a street in Palestine with damaged buildings"
+                height="200"
+                src="https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg"
+                width="250"
+              />
+              <h2>ISRAEL GEMPUR TEPI BARAT</h2></a
+            >
+            <p>
+              Berhasil meluncurkan operasi militer besar-besaran sejak infeksi
+              pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024)
+              dari barat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="containerss">
+      <div class="logo-section">
+        <a href="index.html"
+          ><img src="https://i.im.ge/2024/10/13/k6iPsr.logo.png" alt="PensNews"
+        /></a>
+        <p>PensNews</p>
+      </div>
+      <div class="info-section">
+        <div class="follow-us">
+          <h2>FOLLOW US</h2>
+          <div class="social-links">
+            <a class="social-icon" href="https://facebook.com" target="_blank"
+              ><img
+                src="https://i.ibb.co.com/BNC3j28/facebook-removebg-preview.png"
+                alt="facebook" /></a
+            ><a class="social-icon" href="https://instagram.com" target="_blank"
+              ><img
+                src="https://i.ibb.co.com/BPKj2Ls/download-Photoroom.png"
+                alt="instagram" /></a
+            ><a class="social-icon" href="https://youtube.com" target="_blank"
+              ><img
+                src="https://i.ibb.co.com/3pdH1h8/download-1-Photoroom.png"
+                alt="youtube" /></a
+            ><a class="social-icon" href="https://whatsapp.com" target="_blank"
+              ><img
+                src="https://i.ibb.co.com/bsYZnWh/download-1-Photoroom-1.png"
+                alt="whatsapp"
+            /></a>
+          </div>
+        </div>
+        <div class="contact-us">
+          <h2>CONTACT US</h2>
+          <p>JL. Another Universe</p>
+          <p>031-68714</p>
+          <p>Copyright &copy;2024</p>
+          <p>All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
