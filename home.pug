@@ -1,14 +1,5 @@
-include pug/_nav.pug
-include pug/_home.pug
-include pug/_footer.pug
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title PensNews - Home
+extends _template.pug
+block rel
     link(rel="stylesheet" href="css/home.css")
-  body
-    +nav()
-    +bodyhome()
-    +footer()
+block main
+  +bodyhome()

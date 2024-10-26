@@ -16,10 +16,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Menjadikan navbar tetap di posisi atas */
     top: 0;
     width: 100%;
-    z-index: 1000; /* Agar selalu berada di atas elemen lain */
+    z-index: 1000; 
 }
   
   .logo {
@@ -63,7 +62,7 @@
   nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
   }
   
   nav ul li {
@@ -227,9 +226,9 @@ body {
     background-color: #000;
 }
 .marquee {
-    right: 20px; /* Jarak dari kanan */
-    bottom: 10px; /* Jarak dari bawah */
-    width: 50%; /* Lebar marquee */
+    right: 20px; 
+    bottom: 10px; 
+    width: 50%; 
     height: 25px;
     overflow: hidden;
     background-color: #0a3469;
@@ -237,7 +236,7 @@ body {
     padding: 5px;
     border-radius: 8px;
     margin-bottom: 18px;
-    margin-top: 80px; 
+    margin-top: 20px; 
 }
   
   .marquee p {
