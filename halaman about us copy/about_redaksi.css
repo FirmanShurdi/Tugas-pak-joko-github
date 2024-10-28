@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.left-section, .right-section {
+    width: 48%;
+}
+.left-section img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.right-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.right-section h3 {
+    font-size: 18px;
+    color: #2E3192;
+    margin-bottom: 10px;
+}
+.right-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.right-section ul li {
+    margin-bottom: 5px;
+}
+.right-section ul li::before {
+    content: ">";
+    margin-right: 5px;
+}
