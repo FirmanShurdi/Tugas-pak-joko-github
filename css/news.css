@@ -149,7 +149,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0; 
-     min-height: 100vh; 
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -225,7 +225,15 @@ body {
 .carousel-indicators button.active {
     background-color: #000;
 }
+header {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-family: Arial;
+  font-weight: bold;
+}
 .marquee {
+    top: auto;
     right: 20px; 
     bottom: 10px; 
     width: 50%; 
@@ -243,7 +251,6 @@ body {
     display: inline-block;
     white-space: nowrap;
     animation: marquee 17s linear infinite;
-    line-height: 0%;
   }
   
   @keyframes marquee {
