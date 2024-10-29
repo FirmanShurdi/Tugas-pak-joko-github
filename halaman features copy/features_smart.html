@@ -7,14 +7,21 @@
   <link rel="stylesheet" type="text/css" href="features_smart.css"/>
  </head>
  <body>
-  <div class="breadcrumb">
-   <a href="#">
-    Features
-   </a>
-   &gt;
-   <span>
-    Smart Pop-ups
-   </span>
+  <header>
+    <div class="header-content">
+      <div class="marquee">
+        <p>
+          PensNews merupakan sebuah website yang menyediakan sebuah berita
+          hangat dan menarik yang terdapat didalam negeri maupun diluar
+          negeri
+        </p>
+      </div>
+    </div>
+  </header>
+    <div class="breadcrumbs">
+      <div class="breadcrumb-item"><a href="#">Features > </a></div>
+      <div class="breadcrumb-item"><a href="#">Podcast System</a></div>
+  </div>
   </div>
   <div class="main-image">
     <a href="https://ibb.co.com/cLmWJzV"><img src="https://i.ibb.co.com/jRpCh7s/Screenshot-2024-10-23-142355.png" alt="Screenshot-2024-10-23-142355" border="0"></a>  </div>
@@ -26,8 +33,13 @@
     Satu kode pendek: Kemungkinan tidak terbatas
    </h2>
    <p>
-    Tema surat kabar versi 11.4 memberi Anda kode pendek unik yang memungkinkan Anda menambahkan konten khusus di jendela pop-up modal untuk memberikan alasan kepada pengunjung untuk mengkliknya. Ciptakan interaksi baru dan menarik di situs web Anda!
+    "Smart Pop-up" adalah sebuah fitur antarmuka pengguna yang menampilkan jendela informasi (pop-up) secara otomatis, biasanya untuk menyampaikan pesan penting atau promosi tanpa mengganggu pengalaman utama pengguna. Fitur ini digunakan di berbagai situs web dan aplikasi untuk menarik perhatian pengguna secara efektif, seperti pada notifikasi berita, penawaran khusus, atau informasi peringatan
    </p>
+   <ul>Manfaat Smart Pop-up
+    <br>Komunikasi Efektif: Memungkinkan penyampaian pesan yang cepat dan langsung kepada pengguna.
+    Peningkatan Konversi: Efektif untuk mempromosikan penawaran, produk, atau layanan baru.
+    Personalisasi: Smart pop-up yang cerdas dapat disesuaikan dengan preferensi atau riwayat pengguna.
+    Penggunaan yang Mudah: Pop-up dapat dengan cepat dibuka atau ditutup oleh pengguna sesuai keinginan mereka, sehingga tidak terlalu mengganggu.</ul>
   </div>
   <div class="features">
    <div class="feature-item">
@@ -53,6 +65,19 @@
     <p>
      Custom Pages
     </p>
+    <div class="popup" id="popupBerita">
+        <h2>Breaking News</h2>
+        <p>Indonesia berhasil menorehkan prestasi di bidang teknologi! Klik untuk info lebih lanjut.</p>
+        <button class="close-btn" onclick="closePopup()">Tutup</button>
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById("popupBerita").style.display = "block";
+        };
+        function closePopup() {
+            document.getElementById("popupBerita").style.display = "none";
+        }
+    </script>
    </div>
   </div>
  </body>
