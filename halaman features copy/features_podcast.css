@@ -30,6 +30,7 @@ body {
     max-width: 200px;
     margin-bottom: 20px;
 }
+
 .breadcrumbs {
     display: flex;
     gap: 10px;
@@ -74,19 +75,17 @@ body {
     margin-top: 20px; 
     margin-left: 20px;
 }
-  
-  .marquee p {
+.marquee p {
     display: inline-block;
     white-space: nowrap;
     animation: marquee 17s linear infinite;
     line-height: 0%;
-  }
-  
-  @keyframes marquee {
+}
+@keyframes marquee {
     from {
-      transform: translateX(30%);
+    transform: translateX(30%);
     }
     to {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
     }
-  }
+}
