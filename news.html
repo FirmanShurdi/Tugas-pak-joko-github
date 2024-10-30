@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PensNews - Berita</title>
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/news.css" />
   </head>
   <body>
     <nav>
@@ -18,8 +18,8 @@
         >
       </div>
       <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="news.html">News</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="news.html">News</a></li>
         <li class="dropdown">
           <a href="#">Indeks &#9662;</a>
           <ul class="dropdown-content">
@@ -71,21 +71,82 @@
           </div>
         </div>
       </header>
-      <section class="top-story">
-        <a href="beritaa.html"
-          ><img
-            class="main-image"
-            src="https://i.ibb.co.com/9n8Q3gx/gambar1.webp"
-            alt="gambar1"
-        /></a>
-        <p>
-          Silaturahmi antar media dapat diartikan sebagai kegiatan mempererat
-          hubungan antara media massa dengan mitra-mitranya, seperti Sekretariat
-          DPRD <a href="beritaa.html">Selengkapnya...</a>
-        </p>
-      </section>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <a href="beritaa.html"
+              ><img
+                alt="Soccer players on the field with a referee showing a yellow card"
+                height="400"
+                src="https://storage.googleapis.com/a1aa/image/IXcxTPWXFuIVGtFDOU4DltXxekcb0bYBe0uUwSgvDWwFfeSOB.jpg"
+                width="600"
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="beritaa.html"
+              ><img
+                alt="Two people wearing pink vests standing against a white background"
+                height="400"
+                src="https://storage.googleapis.com/a1aa/image/XyOv7Kf0MOzgdqdAdRSNgsN7o6BkyQrVuzvHQhL737jhvXyJA.jpg"
+                width="600"
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="beritaa.html"
+              ><img
+                alt="Event poster with text 'Jalan Sehat Bersama Ria Ricis' and images of people"
+                height="400"
+                src="https://storage.googleapis.com/a1aa/image/UFPJKgNkAlYQHx2e9f4dyuhYeGl8xJyOCNYbtWQGGmqNe9SOB.jpg"
+                width="600"
+            /></a>
+          </div>
+        </div>
+        <button class="carousel-control left" onclick="prevSlide()">◀</button
+        ><button class="carousel-control right" onclick="nextSlide()">▶</button>
+        <div class="carousel-indicators">
+          <button class="active" onclick="goToSlide(0)"></button
+          ><button onclick="goToSlide(1)"></button
+          ><button onclick="goToSlide(2)"></button>
+        </div>
+      </div>
+      <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+          const slides = document.querySelectorAll(".carousel-item");
+          const indicators = document.querySelectorAll(
+            ".carousel-indicators button"
+          );
+          if (index >= slides.length) {
+            currentSlide = 0;
+          } else if (index < 0) {
+            currentSlide = slides.length - 1;
+          } else {
+            currentSlide = index;
+          }
+          const offset = -currentSlide * 100;
+          document.querySelector(
+            ".carousel-inner"
+          ).style.transform = `translateX(${offset}%)`;
+          indicators.forEach((indicator, i) => {
+            indicator.classList.toggle("active", i === currentSlide);
+          });
+        }
+
+        function nextSlide() {
+          showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+          showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(index) {
+          showSlide(index);
+        }
+      </script>
       <div class="containers">
-        <h1>Home</h1>
+        <h1>News</h1>
         <div class="news-grid">
           <div class="news-item">
             <a href="beritaa.html"

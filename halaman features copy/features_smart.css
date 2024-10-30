@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.breadcrumb {
+    font-size: 18px;
+    margin: 20px;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: black;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.main-image {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.main-image img {
+    width: 100%;
+}
+.content {
+    text-align: center;
+    margin: 20px;
+}
+.content h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.content h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.content p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.features {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.feature-item {
+    margin: 0 20px;
+    text-align: center;
+}
+.feature-item img {
+    width: 100px;
+    height: 100px;
+}
+.feature-item p {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+    z-index: 1000;
+}
+
+.popup h2 {
+    margin: 0;
+    color: #333333;
+}
+
+.popup p {
+    color: #555555;
+}
+
+.popup .close-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.breadcrumbs {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.breadcrumb-item {
+    background-color: #ddd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+.breadcrumb {
+    margin: 20px;
+    font-size: 18px;
+}
+
+.breadcrumb a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.marquee {
+    right: 20px; 
+    bottom: 10px; 
+    width: 50%; 
+    height: 28px;
+    overflow: hidden;
+    background-color: #0a3469;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    margin-top: 20px; 
+    margin-left: 20px;
+}
+  
+  .marquee p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 17s linear infinite;
+    line-height: 0%;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(30%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
