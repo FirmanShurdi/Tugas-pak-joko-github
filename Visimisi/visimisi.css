@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .breadcrumb {
+    margin: 20px;
+    font-size: 18px;
+  }
+  
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .vision, .mission {
+    margin: 0 70px;
+  }
+  
+  .vision img, .mission img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .description {
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px;
+    line-height: 1.5;
+  }
+  .marquee {
+    right: 20px; 
+    bottom: 10px; 
+    width: 50%; 
+    height: 25px;
+    overflow: hidden;
+    background-color: #0a3469;
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    margin-top: 10px; 
+    margin-left: 20px;
+}
+  
+  .marquee p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 17s linear infinite;
+    line-height: 0%;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(30%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .breadcrumbs {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.breadcrumb-item {
+    background-color: #ddd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+.breadcrumb {
+    margin: 20px;
+    font-size: 18px;
+}
+
+.breadcrumb a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
