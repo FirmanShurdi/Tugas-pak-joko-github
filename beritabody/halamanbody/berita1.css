@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.breadcrumbs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-item {
+    background-color: #ddd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+.marquee {
+    right: 20px; /* Jarak dari kanan */
+    bottom: 10px; /* Jarak dari bawah */
+    width: 50%; /* Lebar marquee */
+    height: 25px;
+    overflow: hidden;
+    background-color: #0a3469;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    margin-top: 80px; 
+}
+  
+  .marquee p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 17s linear infinite;
+    line-height: 0%;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(30%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+.container1 {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-arrow a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.back-arrow a:hover {
+    background-color: #bbb;
+}
+.header {
+    text-align: center; 
+    margin-bottom: 23px; 
+}
+.header h1 {
+    font-size: 24px; 
+    color: #000; 
+    margin: 0; 
+    padding: 10px 0;
+    border: none; 
+    display: inline-block;
+}
+
+.author-info {
+    text-align: right;
+    font-size: 14px;
+    color: #555;
+}
+
+.image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.content {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.pagination {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.page-number {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #000;
+}
+
+.page-number:hover {
+    background-color: #aaa;
+}
