@@ -117,7 +117,10 @@
     z-index: 1;
     border-radius: 10px;
     margin-top: 13px;
+<<<<<<< HEAD
     margin-inline: 3px;
+=======
+>>>>>>> upstream
   }
   
   .dropdown-content li {

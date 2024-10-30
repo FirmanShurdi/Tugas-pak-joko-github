@@ -16,6 +16,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> upstream
   }
   
   .logo {
@@ -115,6 +119,10 @@
     z-index: 1;
     border-radius: 10px;
     margin-top: 13px;
+<<<<<<< HEAD
+=======
+    margin-right: 100px;
+>>>>>>> upstream
   }
   
   .dropdown-content li {
