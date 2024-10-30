@@ -5,14 +5,14 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 50px;
     background: linear-gradient(to right, #f0f0f0, #c0c0c0);
     color: black;
 }
@@ -23,6 +23,7 @@ body {
 }
 
 .logo-section img {
+<<<<<<< Updated upstream
     max-width: 100px;
 }
 .footercContainer{
@@ -72,10 +73,45 @@ body {
 
 .footer-section p {
     font-size: 14px;
+=======
+    max-width: 120px;
+    margin-bottom: 10px;
+>>>>>>> Stashed changes
 }
 
 .logo-section p {
     font-weight: bold;
     font-size: 18px;
+<<<<<<< Updated upstream
     margin-top: 10px;
+=======
+}
+
+.follow-us h3, .contact-us h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.follow-us p, .contact-us p {
+    font-size: 16px;
+    margin: 5px 0;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow-us i {
+    margin-right: 10px;
+}
+
+.contact-us p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.contact-us p:last-child {
+    margin-top: 5px;
+    font-style: italic;
+>>>>>>> Stashed changes
 }
