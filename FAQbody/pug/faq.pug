@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title FAQ Section
+    link(rel="stylesheet" href="FAQ.css")
+
+  body
+    header
+      .header-content
+        .marquee
+          p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
+
+    .breadcrumbs
+      .breadcrumb-item
+        a(href="#") About Us >
+      .breadcrumb-item
+        a(href="#") FAQ
+
+    .faq-container
+      .faq-header
+        img.faq-icon(src="https://i.ibb.co.com/TgCHsHc/org.png" alt="FAQ Icon")
+        h2 FAQ
+      
+      .faq-item(onclick="toggleFaq(this)") FAQ 1
+        span +
+
+      .faq-content
+        p Answer line 1
+        p Answer line 2
+        p Answer line 3
+
+      .faq-item(onclick="toggleFaq(this)") FAQ 2
+        span +
+
+      .faq-content
+        p Answer line 1
+        p Answer line 2
+        p Answer line 3
+
+      .faq-item(onclick="toggleFaq(this)") FAQ 3
+        span +
+
+      .faq-content
+        p Answer line 1
+        p Answer line 2
+        p Answer line 3
+
+    .faq-footer
+      a(href="Redaksi.html")
+        img.footer-icon(src="https://i.ibb.co.com/VJ8QJY3/download-3-removebg-preview.png" alt="Footer Icon")
+
+    script.
+      function toggleFaq(element) {
+        const content = element.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      }

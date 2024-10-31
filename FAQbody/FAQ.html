@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="FAQ.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+          <div class="marquee">
+            <p>
+              PensNews merupakan sebuah website yang menyediakan sebuah berita
+              hangat dan menarik yang terdapat didalam negeri maupun diluar
+              negeri
+            </p>
+          </div>
+        </div>
+      </header>
+        <div class="breadcrumbs">
+          <div class="breadcrumb-item"><a href="#">About Us > </a></div>
+          <div class="breadcrumb-item"><a href="#"></a>FAQ</div>
+      </div>
+<div class="faq-container">
+    <div class="faq-header">
+        <img src="https://i.ibb.co.com/TgCHsHc/org.png" alt="FAQ Icon" class="faq-icon">
+        <h2>FAQ</h2>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+        FAQ 1
+        <span>+</span>
+    </div>
+    <div class="faq-content">
+        <p>Answer line 1</p>
+        <p>Answer line 2</p>
+        <p>Answer line 3</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+        FAQ 2
+        <span>+</span>
+    </div>
+    <div class="faq-content">
+        <p>Answer line 1</p>
+        <p>Answer line 2</p>
+        <p>Answer line 3</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+        FAQ 3
+        <span>+</span>
+    </div>
+    <div class="faq-content">
+        <p>Answer line 1</p>
+        <p>Answer line 2</p>
+        <p>Answer line 3</p>
+    </div>
+</div>
+<div class="faq-footer">
+    <a href="Redaksi.html"><img src="https://i.ibb.co.com/VJ8QJY3/download-3-removebg-preview.png" alt="Footer Icon" class="footer-icon"></a>
+</div>
+</div>
+<script>
+    function toggleFaq(element) {
+        const content = element.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
