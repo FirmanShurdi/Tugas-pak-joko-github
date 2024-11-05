@@ -1,0 +1,142 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    flex-direction: column
+  }
+  
+  .logo h1 {
+    color: #0814e9;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .logo p {
+    color: #7b7b7b;
+    font-size: 16px;
+    margin-top: -5px;
+  }
+  
+  .banner {
+    text-align: center;
+    padding: 30px;
+    background: #eaeaea;
+  }
+  
+  .banner p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .banner blockquote {
+    font-size: 16px;
+    font-style: italic;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .banner button {
+    background-color: #b91d24;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .banner button:active {
+    background-color: #1d2c8b; 
+  }
+  .editorial-board {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .editorial-board h2 {
+    color: #b91d24;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .editorial-board p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .editorial-board p strong {
+    color: #19649e;
+  }
+  .marquee {
+    right: 20px; 
+    bottom: 10px; 
+    width: 50%; 
+    height: 25px;
+    overflow: hidden;
+    background-color: #0a3469;
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    margin-top: 10px; 
+    margin-left: 20px;
+}
+  
+  .marquee p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 17s linear infinite;
+    line-height: 0%;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(30%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .breadcrumbs {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.breadcrumb-item {
+    background-color: #ddd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+.breadcrumb {
+    margin: 20px;
+    font-size: 18px;
+}
+
+.breadcrumb a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
