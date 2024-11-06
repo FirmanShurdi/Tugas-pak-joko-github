@@ -14,6 +14,7 @@ body {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  margin-left: 15px;
 }
 
 .breadcrumb-item {
