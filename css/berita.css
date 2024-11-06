@@ -14,6 +14,7 @@ body {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    margin-left: 15px;
 }
 
 .breadcrumb-item {
@@ -31,7 +32,7 @@ body {
 .marquee {
     right: 20px; 
     bottom: 10px; 
-    width: 50%; 
+    width: 40%; 
     height: 25px;
     overflow: hidden;
     background-color: #0a3469;
@@ -40,7 +41,7 @@ body {
     border-radius: 8px;
     margin-bottom: 18px;
     margin-top: 20px; 
-    margin-left: 20px;
+    margin-left: 30px;
 }
   
   .marquee p {
