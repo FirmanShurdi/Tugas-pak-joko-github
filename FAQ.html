@@ -82,25 +82,52 @@
         />
         <h2>FAQ</h2>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">FAQ 1<span>+</span></div>
-      <div class="faq-content">
-        <p>Answer line 1</p>
-        <p>Answer line 2</p>
-        <p>Answer line 3</p>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">FAQ 2<span>+</span></div>
-      <div class="faq-content">
-        <p>Answer line 1</p>
-        <p>Answer line 2</p>
-        <p>Answer line 3</p>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">FAQ 3<span>+</span></div>
-      <div class="faq-content">
-        <p>Answer line 1</p>
-        <p>Answer line 2</p>
-        <p>Answer line 3</p>
-      </div>
     </div>
+    
+    <script>
+      const faqData = [
+        { question: "FAQ 1", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
+        { question: "FAQ 2", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
+        { question: "FAQ 3", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] }
+      ];
+          const faqContainer = document.querySelector('.faq-container');
+    
+      function generateFaq() {
+        faqData.forEach(item => {
+          const faqItem = document.createElement('div');
+          faqItem.classList.add('faq-item');
+          faqItem.setAttribute('onclick', 'toggleFaq(this)');
+          faqItem.innerHTML = `${item.question}<span>+</span>`;
+          
+          const faqContent = document.createElement('div');
+          faqContent.classList.add('faq-content');
+          item.answers.forEach(answer => {
+            const p = document.createElement('p');
+            p.textContent = answer;
+            faqContent.appendChild(p);
+          });
+    
+          faqContainer.appendChild(faqItem);
+          faqContainer.appendChild(faqContent);
+        });
+      }
+    
+      generateFaq();
+    
+      function toggleFaq(element) {
+        const content = element.nextElementSibling;
+        const span = element.querySelector('span');
+    
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+          span.textContent = '+';
+        } else {
+          content.style.display = 'block';
+          span.textContent = '−';
+        }
+      }
+    </script>
+    
     <div class="faq-footer">
       <a href="Redaksi.html"
         ><img
