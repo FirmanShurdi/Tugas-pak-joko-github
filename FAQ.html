@@ -18,7 +18,7 @@
         >
       </div>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
         <li><a href="news.html">News</a></li>
         <li class="dropdown">
           <a href="#">Indeks &#9662;</a>
@@ -34,7 +34,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a class="active" href="#">About Us &#9662;</a>
+          <a href="#">About Us &#9662;</a>
           <ul class="dropdown-content">
             <li><a href="kontak.html">Kontak</a></li>
             <li><a href="Redaksi.html">Redaksi</a></li>
@@ -85,51 +85,6 @@
         <h2>FAQ</h2>
       </div>
     </div>
-    
-    <script>
-      const faqData = [
-        { question: "FAQ 1", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
-        { question: "FAQ 2", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
-        { question: "FAQ 3", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] }
-      ];
-          const faqContainer = document.querySelector('.faq-container');
-    
-      function generateFaq() {
-        faqData.forEach(item => {
-          const faqItem = document.createElement('div');
-          faqItem.classList.add('faq-item');
-          faqItem.setAttribute('onclick', 'toggleFaq(this)');
-          faqItem.innerHTML = `${item.question}<span>+</span>`;
-          
-          const faqContent = document.createElement('div');
-          faqContent.classList.add('faq-content');
-          item.answers.forEach(answer => {
-            const p = document.createElement('p');
-            p.textContent = answer;
-            faqContent.appendChild(p);
-          });
-    
-          faqContainer.appendChild(faqItem);
-          faqContainer.appendChild(faqContent);
-        });
-      }
-    
-      generateFaq();
-    
-      function toggleFaq(element) {
-        const content = element.nextElementSibling;
-        const span = element.querySelector('span');
-    
-        if (content.style.display === 'block') {
-          content.style.display = 'none';
-          span.textContent = '+';
-        } else {
-          content.style.display = 'block';
-          span.textContent = '−';
-        }
-      }
-    </script>
-    
     <div class="faq-footer">
       <a href="Redaksi.html"
         ><img
@@ -139,11 +94,53 @@
       /></a>
     </div>
     <script>
-      function toggleFaq(element) {
-        const content = element.nextElementSibling;
-        content.style.display =
-          content.style.display === "block" ? "none" : "block";
-      }
+      const faqData = [
+        {
+          question: "FAQ 1",
+          answers: ["Answer line 1", "Answer line 2", "Answer line 3"],
+        },
+        {
+          question: "FAQ 2",
+          answers: ["Answer line 1", "Answer line 2", "Answer line 3"],
+        },
+        {
+          question: "FAQ 3",
+          answers: ["Answer line 1", "Answer line 2", "Answer line 3"],
+        },
+      ];
+
+      const faqContainer = document.querySelector(".faq-container");
+
+      faqData.forEach((faq) => {
+        // Create FAQ item
+        const faqItem = document.createElement("div");
+        faqItem.className = "faq-item";
+        faqItem.textContent = faq.question;
+
+        const toggleIcon = document.createElement("span");
+        toggleIcon.textContent = "+";
+        faqItem.appendChild(toggleIcon);
+
+        faqItem.onclick = () => {
+          faqContent.style.display =
+            faqContent.style.display === "block" ? "none" : "block";
+        };
+
+        // Create FAQ content
+        const faqContent = document.createElement("div");
+        faqContent.className = "faq-content";
+        faqContent.style.display = "none";
+
+        faq.answers.forEach((answer) => {
+          const answerParagraph = document.createElement("p");
+          answerParagraph.textContent = answer;
+          faqContent.appendChild(answerParagraph);
+        });
+
+        // Append to container
+        faqContainer.appendChild(faqItem);
+        faqContainer.appendChild(faqContent);
+      });
     </script>
     <div class="container">
       <div class="logo-section">
