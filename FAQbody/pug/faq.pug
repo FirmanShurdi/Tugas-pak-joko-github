@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title FAQ Section
     link(rel="stylesheet" href="FAQ.css")
-
+  
   body
     header
       .header-content
@@ -22,37 +22,48 @@ html(lang="en")
       .faq-header
         img.faq-icon(src="https://i.ibb.co.com/TgCHsHc/org.png" alt="FAQ Icon")
         h2 FAQ
-      
-      .faq-item(onclick="toggleFaq(this)") FAQ 1
-        span +
 
-      .faq-content
-        p Answer line 1
-        p Answer line 2
-        p Answer line 3
-
-      .faq-item(onclick="toggleFaq(this)") FAQ 2
-        span +
-
-      .faq-content
-        p Answer line 1
-        p Answer line 2
-        p Answer line 3
-
-      .faq-item(onclick="toggleFaq(this)") FAQ 3
-        span +
-
-      .faq-content
-        p Answer line 1
-        p Answer line 2
-        p Answer line 3
+    //- FAQ items will be inserted here by JavaScript
 
     .faq-footer
       a(href="Redaksi.html")
         img.footer-icon(src="https://i.ibb.co.com/VJ8QJY3/download-3-removebg-preview.png" alt="Footer Icon")
 
     script.
-      function toggleFaq(element) {
-        const content = element.nextElementSibling;
-        content.style.display = content.style.display === "block" ? "none" : "block";
-      }
+      const faqData = [
+        { question: "FAQ 1", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
+        { question: "FAQ 2", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
+        { question: "FAQ 3", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] }
+      ];
+
+      const faqContainer = document.querySelector('.faq-container');
+
+      faqData.forEach(faq => {
+        // Create FAQ item
+        const faqItem = document.createElement('div');
+        faqItem.className = 'faq-item';
+        faqItem.textContent = faq.question;
+
+        const toggleIcon = document.createElement('span');
+        toggleIcon.textContent = '+';
+        faqItem.appendChild(toggleIcon);
+
+        faqItem.onclick = () => {
+          faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
+        };
+
+        // Create FAQ content
+        const faqContent = document.createElement('div');
+        faqContent.className = 'faq-content';
+        faqContent.style.display = 'none';
+
+        faq.answers.forEach(answer => {
+          const answerParagraph = document.createElement('p');
+          answerParagraph.textContent = answer;
+          faqContent.appendChild(answerParagraph);
+        });
+
+        // Append to container
+        faqContainer.appendChild(faqItem);
+        faqContainer.appendChild(faqContent);
+      });
