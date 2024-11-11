@@ -29,26 +29,21 @@
             <img src="https://i.ibb.co.com/TgCHsHc/org.png" alt="FAQ Icon" class="faq-icon">
             <h2>FAQ</h2>
         </div>
+
+        <!-- FAQ items will be inserted here by JavaScript -->
     </div>
 
     <div class="faq-footer">
         <a href="Redaksi.html"><img src="https://i.ibb.co.com/VJ8QJY3/download-3-removebg-preview.png" alt="Footer Icon" class="footer-icon"></a>
     </div>
-
     <script>
-        // Array berisi pertanyaan dan jawaban
         const faqData = [
-            { question: "Apa itu PensNews?", answers: ["PensNews adalah sebuah platform berita yang menyediakan berita terkini di dalam maupun luar negeri."] },
-            { question: "Bagaimana cara menggunakan PensNews?", answers: ["Anda cukup mengunjungi website PensNews dan memilih kategori berita yang diinginkan."] },
-            { question: "Apakah PensNews gratis?", answers: ["Ya, PensNews dapat diakses secara gratis tanpa biaya berlangganan."] }
+            { question: "FAQ 1", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
+            { question: "FAQ 2", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
+            { question: "FAQ 3", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
         ];
-
-        // Mendapatkan elemen container FAQ
         const faqContainer = document.querySelector('.faq-container');
-
-        // Loop melalui setiap item di array
-        faqData.forEach((faq, index) => {
-            // Buat elemen untuk pertanyaan FAQ
+        faqData.forEach(faq => {
             const faqItem = document.createElement('div');
             faqItem.className = 'faq-item';
             faqItem.textContent = faq.question;
@@ -57,24 +52,22 @@
             toggleIcon.textContent = '+';
             faqItem.appendChild(toggleIcon);
 
-            // Menambahkan fungsi klik untuk menampilkan/menyembunyikan jawaban
             faqItem.onclick = () => {
                 faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
             };
 
-            // Buat elemen untuk jawaban FAQ
+            // Create FAQ content
             const faqContent = document.createElement('div');
             faqContent.className = 'faq-content';
             faqContent.style.display = 'none';
 
-            // Loop untuk setiap jawaban di dalam array `answers`
             faq.answers.forEach(answer => {
                 const answerParagraph = document.createElement('p');
                 answerParagraph.textContent = answer;
                 faqContent.appendChild(answerParagraph);
             });
 
-            // Tambahkan elemen ke dalam container FAQ
+            // Append to container
             faqContainer.appendChild(faqItem);
             faqContainer.appendChild(faqContent);
         });
