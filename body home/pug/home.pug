@@ -1,0 +1,71 @@
+doctype html
+html(lang="id")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Berita Terkini
+    link(rel="stylesheet", href="home.css")
+  body
+    main
+      header
+        .header-content
+          .marquee
+            p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
+      section.top-story
+        a(href="berita.html")
+          img.main-image(src="https://i.ibb.co.com/9n8Q3gx/gambar1.webp", alt="gambar1")
+        p Silaturahmi antar media dapat diartikan sebagai kegiatan mempererat hubungan antara media massa dengan mitra-mitranya, seperti Sekretariat DPRD 
+          a(href="Berita.html") Selengkapnya...
+      .containers
+        h1 Home
+        .news-grid#newsGrid
+      
+      script.
+        const newsData = [
+          {
+            title: 'KPDIP: Pilkada Jakarta 2024 "not for sale"',
+            link: 'beritaa.html',
+            imageSrc: 'https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg',
+            altText: 'Image of three people in red shirts speaking at a microphone',
+            description: 'Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).'
+          },
+          {
+            title: 'Penyanyi Sukses Dalam Berkarir, Ini Rahasinya',
+            link: 'beritaa.html',
+            imageSrc: 'https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg',
+            altText: 'Image of a person singing on stage with red lighting',
+            description: 'Sikembalinya serbuan militer, dapat diartikan sebagai kegiatan mempertegas hubungan antara militer dan situasi dengan kebrutalannya, seperti disaksikan DPRD.'
+          },
+          {
+            title: 'JEPANG PANIK BUYING',
+            link: 'beritaa.html',
+            imageSrc: 'https://storage.googleapis.com/a1aa/image/lSg9c5lESwJSGVSkWN5Tp2HjWjfZfOWbK8g5FPzxVNCk9tkTA.jpg',
+            altText: 'Image of a person walking through rubble in Japan',
+            description: 'Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat mempersembahkan lagu "Blue Giant". Tim bergegas perlahan ke belakang panggung.'
+          },
+          {
+            title: 'ISRAEL GEMPUR TEPI BARAT',
+            link: 'beritaa.html',
+            imageSrc: 'https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg',
+            altText: 'Image of a street in Palestine with damaged buildings',
+            description: 'Berhasil meluncurkan operasi militer besar-besaran sejak infeksi pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024) dari barat.'
+          }
+        ];
+
+        function each(array, callback) {
+          for (let i = 0; i < array.length; i++) callback(array[i], i);
+        }
+
+        const newsGrid = document.getElementById('newsGrid');
+        each(newsData, function (news) {
+          const newsItem = `
+            <div class="news-item">
+              <a href="${news.link}">
+                <img src="${news.imageSrc}" alt="${news.altText}" height="200" width="250"/>
+                <h2>${news.title}</h2>
+              </a>
+              <p>${news.description}</p>
+            </div>
+          `;
+          newsGrid.innerHTML += newsItem;
+        });

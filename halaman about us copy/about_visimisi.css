@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.breadcrumb {
+    margin: 20px;
+    font-size: 18px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.vision, .mission {
+    margin: 0 20px;
+}
+.vision img, .mission img {
+    width: 150px;
+    height: 150px;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.description {
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px;
+    line-height: 1.5;
+}

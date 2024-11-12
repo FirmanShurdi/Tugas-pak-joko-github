@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.breadcrumb-item {
+  background-color: #ddd;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.breadcrumb-item a {
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+}
+.marquee {
+  right: 20px; 
+  bottom: 10px; 
+  width: 50%; 
+  height: 25px;
+  overflow: hidden;
+  background-color: #0a3469;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  margin-top: 20px; 
+  margin-left: 20px;
+}
+
+.marquee p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 17s linear infinite;
+  line-height: 0%;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(30%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+.header h2 {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.news-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.news-item {
+    width: 48%;
+    display: flex;
+    margin-bottom: 20px;
+}
+.news-item img {
+    width: 40%;
+    height: auto;
+    margin-left: 30px;
+}
+.news-item .content {
+    padding-left: 20px;
+}
+.news-item .content h3 {
+    font-size: 24px;
+    margin: 0;
+}
+.news-item .content p {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+}
+.latest-news {
+    margin-top: 40px;
+}
+.latest-news h2 {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 30px;
+}
+.latest-news-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.latest-news-item img {
+    width: 15%;
+    height: auto;
+    margin-left: 30px;
+}
+.latest-news-item .content {
+    width: 100%;
+    padding-left: 20px;
+}
+.latest-news-item .content h3 {
+    font-size: 18px;
+    margin: 0;
+}
+.latest-news-item .content p {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+}

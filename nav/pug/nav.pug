@@ -1,0 +1,51 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title PensNews - Home
+    link(rel="stylesheet" href="navbar.css")
+  body
+    nav
+      .logo
+        a(href="index.html")
+          img(src="https://i.im.ge/2024/10/13/k6iPsr.logo.png" alt="PensNews")
+        span.brand-name
+          span.pens Pens
+          span.news News
+      ul
+        li: a(href="index.html" class="active") Home
+        li: a(href="news.html") News
+        li.dropdown
+          a(href="#") Indeks &#9662;
+          ul.dropdown-content
+            li: a(href="national.html") National
+            li: a(href="international.html") International
+            li: a(href="otomotif.html") Otomotif
+            li: a(href="GayaHidup.html") Gaya Hidup
+            li: a(href="ekonomi.html") Ekonomi
+            li: a(href="Olahraga.html") Olahraga
+            li: a(href="Hiburan.html") Hiburan
+            li: a(href="galeri.html") Galeri
+        li.dropdown
+          a(href="#") About Us &#9662;
+          ul.dropdown-content
+            li: a(href="kontak.html") Kontak
+            li: a(href="Redaksi.html") Redaksi
+            li: a(href="Pedoman.html") Pedoman Berita
+            li: a(href="Visimisi.html") Visi Misi
+            li: a(href="Privacypolicy.html") Privacy Policy
+            li: a(href="FAQ.html") FAQ
+            li: a(href="Prestasi.html") Prestasi
+            li: a(href="TeamOfServie.html") Team Of Service
+            li: a(href="Disclaimer.html") Disclaimer
+        li.dropdown
+          a(href="#") Features &#9662;
+          ul.dropdown-content
+            li: a(href="podcastsystem.html") Podcast System
+            li: a(href="SmartPopus.html") Smart Pop-Us
+            li: a(href="Header.html") Header and Builder
+            li: a(href="member.html") Membership
+            li: a(href="Livevisual.html") Live Visual Builder
+            li: a(href="CloudLibrary.html") Cloud Library
+      input(type="text" placeholder="Search")

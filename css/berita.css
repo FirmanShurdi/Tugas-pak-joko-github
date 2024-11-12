@@ -14,6 +14,7 @@ body {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    margin-left: 15px;
 }
 
 .breadcrumb-item {
@@ -29,9 +30,9 @@ body {
     font-weight: bold;
 }
 .marquee {
-    right: 20px; /* Jarak dari kanan */
-    bottom: 10px; /* Jarak dari bawah */
-    width: 50%; /* Lebar marquee */
+    right: 20px; 
+    bottom: 10px; 
+    width: 40%; 
     height: 25px;
     overflow: hidden;
     background-color: #0a3469;
@@ -40,7 +41,7 @@ body {
     border-radius: 8px;
     margin-bottom: 18px;
     margin-top: 20px; 
-    margin-left: 20px;
+    margin-left: 30px;
 }
   
   .marquee p {
@@ -361,7 +362,7 @@ h2 {
   nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
   }
   
   nav ul li {
@@ -376,6 +377,7 @@ h2 {
     border-radius: 20px;
     position: relative; 
     transition: background-color 0.3s;
+    margin-left: 8px;
   }
   
   nav ul li a:hover {
@@ -413,10 +415,12 @@ h2 {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 95px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 10px;
     margin-top: 13px;
+    margin-left: 12px;
+    padding: 4px 0;
   }
   
   .dropdown-content li {
