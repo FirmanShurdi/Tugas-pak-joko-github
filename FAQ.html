@@ -24,12 +24,12 @@
           <a href="#">Indeks &#9662;</a>
           <ul class="dropdown-content">
             <li><a href="national.html">National</a></li>
-            <li><a href="international.html">International</a></li>
-            <li><a href="otomotif.html">Otomotif</a></li>
-            <li><a href="GayaHidup.html">Gaya Hidup</a></li>
-            <li><a href="ekonomi.html">Ekonomi</a></li>
-            <li><a href="Olahraga.html">Olahraga</a></li>
-            <li><a href="Hiburan.html">Hiburan</a></li>
+            <li><a href="national.html">International</a></li>
+            <li><a href="national.html">Otomotif</a></li>
+            <li><a href="national.html">Gaya Hidup</a></li>
+            <li><a href="national.html">Ekonomi</a></li>
+            <li><a href="national.html">Olahraga</a></li>
+            <li><a href="national.html">Hiburan</a></li>
             <li><a href="galeri.html">Galeri</a></li>
           </ul>
         </li>
@@ -82,7 +82,7 @@
           src="https://i.ibb.co.com/TgCHsHc/org.png"
           alt="FAQ Icon"
         />
-        <h2>FAQ</h2>
+        <h1>FAQ</h1>
       </div>
     </div>
     
@@ -139,11 +139,59 @@
       /></a>
     </div>
     <script>
+<<<<<<< HEAD
       function toggleFaq(element) {
         const content = element.nextElementSibling;
         content.style.display =
           content.style.display === "block" ? "none" : "block";
       }
+=======
+      const faqData = [
+        {
+          question: "FAQ 1",
+          answers: ["Answer line 1", "Answer line 2", "Answer line 3"],
+        },
+        {
+          question: "FAQ 2",
+          answers: ["Answer line 1", "Answer line 2", "Answer line 3"],
+        },
+        {
+          question: "FAQ 3",
+          answers: ["Answer line 1", "Answer line 2", "Answer line 3"],
+        },
+      ];
+
+      const faqContainer = document.querySelector(".faq-container");
+
+      faqData.forEach((faq) => {
+    
+        const faqItem = document.createElement("div");
+        faqItem.className = "faq-item";
+        faqItem.textContent = faq.question;
+
+        const toggleIcon = document.createElement("span");
+        toggleIcon.textContent = "+";
+        faqItem.appendChild(toggleIcon);
+
+        faqItem.onclick = () => {
+          faqContent.style.display =
+            faqContent.style.display === "block" ? "none" : "block";
+        };
+
+        const faqContent = document.createElement("div");
+        faqContent.className = "faq-content";
+        faqContent.style.display = "none";
+
+        faq.answers.forEach((answer) => {
+          const answerParagraph = document.createElement("p");
+          answerParagraph.textContent = answer;
+          faqContent.appendChild(answerParagraph);
+        });
+
+        faqContainer.appendChild(faqItem);
+        faqContainer.appendChild(faqContent);
+      });
+>>>>>>> b753f50b7847741a0a968d5ae471797ddf45c4d0
     </script>
     <div class="container">
       <div class="logo-section">

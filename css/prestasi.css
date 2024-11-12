@@ -40,13 +40,16 @@ body {
 
 .medals {
     margin-top: 30px;
+    text-align: center;
 }
 
 .medals h2 {
     font-size: 20px;
     text-align: center;
 }
-
+.pp{
+  text-align: center;
+}
 .medals ul {
     list-style: none;
     padding: 0;
