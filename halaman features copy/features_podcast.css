@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.breadcrumb {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.version {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.main-image {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+.section-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.image-row img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.breadcrumb-item {
+    background-color: #ddd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+.breadcrumb {
+    margin: 20px;
+    font-size: 18px;
+}
+
+.breadcrumb a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.marquee {
+    right: 20px; 
+    bottom: 10px; 
+    width: 50%; 
+    height: 28px;
+    overflow: hidden;
+    background-color: #0a3469;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    margin-top: 20px; 
+    margin-left: 20px;
+}
+.marquee p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 17s linear infinite;
+    line-height: 0%;
+}
+@keyframes marquee {
+    from {
+    transform: translateX(30%);
+    }
+    to {
+    transform: translateX(-100%);
+    }
+}
