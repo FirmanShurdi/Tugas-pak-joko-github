@@ -14,7 +14,6 @@ body {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
-  margin-left: 15px;
 }
 
 .breadcrumb-item {
@@ -295,7 +294,7 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 nav ul li {
@@ -310,7 +309,6 @@ nav ul li a {
   border-radius: 20px;
   position: relative;
   transition: background-color 0.3s;
-  margin-left: 7px;
 }
 
 nav ul li a:hover {
@@ -352,8 +350,6 @@ input[type="text"] {
   z-index: 1;
   border-radius: 10px;
   margin-top: 13px;
-  padding: 4px 0;
-  margin-left: 12px;
 }
 
 .dropdown-content li {

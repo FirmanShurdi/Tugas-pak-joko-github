@@ -4,84 +4,75 @@ mixin news1()
         .header-content
           .marquee
             p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
-        .carousel
-          .carousel-inner#carouselInner
-          button.carousel-control.left(onclick="prevSlide()") ◀
-          button.carousel-control.right(onclick="nextSlide()") ▶
-          .carousel-indicators#carouselIndicators
-
-      script.
-        const carouselData = [
-          { alt: "Soccer players on the field with a referee showing a yellow card", src: "https://storage.googleapis.com/a1aa/image/IXcxTPWXFuIVGtFDOU4DltXxekcb0bYBe0uUwSgvDWwFfeSOB.jpg", href: "beritaa.html" },
-          { alt: "Two people wearing pink vests standing against a white background", src: "https://storage.googleapis.com/a1aa/image/XyOv7Kf0MOzgdqdAdRSNgsN7o6BkyQrVuzvHQhL737jhvXyJA.jpg", href: "beritaa.html" },
-          { alt: "Event poster with text 'Jalan Sehat Bersama Ria Ricis' and images of people", src: "https://storage.googleapis.com/a1aa/image/UFPJKgNkAlYQHx2e9f4dyuhYeGl8xJyOCNYbtWQGGmqNe9SOB.jpg", href: "beritaa.html" }
-        ];
-        
-        const carouselInner = document.getElementById("carouselInner");
-        const carouselIndicators = document.getElementById("carouselIndicators");
-        carouselData.forEach((item, index) => {
-          const carouselItem = document.createElement("div");
-          carouselItem.className = "carousel-item";
-          if (index === 0) carouselItem.classList.add("active");
-          const link = document.createElement("a");
-          link.href = item.href;
-          const img = document.createElement("img");
-          img.alt = item.alt;
-          img.src = item.src;
-          img.width = 600;
-          img.height = 400;
-          link.appendChild(img);
-          carouselItem.appendChild(link);
-          carouselInner.appendChild(carouselItem);
-          const indicator = document.createElement("button");
-          if (index === 0) indicator.classList.add("active");
-          indicator.onclick = () => goToSlide(index);
-          carouselIndicators.appendChild(indicator);
-        });
-
+      .carousel
+        .carousel-inner
+          .carousel-item
+           a(href="beritaa.html")
+            img(alt="Soccer players on the field with a referee showing a yellow card", height="400", src="https://storage.googleapis.com/a1aa/image/IXcxTPWXFuIVGtFDOU4DltXxekcb0bYBe0uUwSgvDWwFfeSOB.jpg", width="600")
+          .carousel-item
+           a(href="beritaa.html")
+            img(alt="Two people wearing pink vests standing against a white background", height="400", src="https://storage.googleapis.com/a1aa/image/XyOv7Kf0MOzgdqdAdRSNgsN7o6BkyQrVuzvHQhL737jhvXyJA.jpg", width="600")
+          .carousel-item
+           a(href="beritaa.html")
+            img(alt="Event poster with text 'Jalan Sehat Bersama Ria Ricis' and images of people", height="400", src="https://storage.googleapis.com/a1aa/image/UFPJKgNkAlYQHx2e9f4dyuhYeGl8xJyOCNYbtWQGGmqNe9SOB.jpg", width="600")
+        button.carousel-control.left(onclick="prevSlide()") ◀
+        button.carousel-control.right(onclick="nextSlide()") ▶
+        .carousel-indicators
+          button.active(onclick="goToSlide(0)")
+          button(onclick="goToSlide(1)")
+          button(onclick="goToSlide(2)")
       script.
         let currentSlide = 0;
+
         function showSlide(index) {
-          const slides = document.querySelectorAll(".carousel-item");
-          const indicators = document.querySelectorAll(".carousel-indicators button");
-          if (index >= slides.length) currentSlide = 0;
-          else if (index < 0) currentSlide = slides.length - 1;
-          else currentSlide = index;
-          const offset = -currentSlide * 100;
-          document.querySelector(".carousel-inner").style.transform = `translateX(${offset}%)`;
-          indicators.forEach((indicator, i) => indicator.classList.toggle("active", i === currentSlide));
+            const slides = document.querySelectorAll('.carousel-item');
+            const indicators = document.querySelectorAll('.carousel-indicators button');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === currentSlide);
+            });
         }
 
-        function nextSlide() { showSlide(currentSlide + 1); }
-        function prevSlide() { showSlide(currentSlide - 1); }
-        function goToSlide(index) { showSlide(index); }
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
 
       .containers
-        h1 News
-        .news-grid#newsGrid
-
-      script.
-        const newsData = [
-          { title: 'KPDIP: Pilkada Jakarta 2024 "not for sale"', link: 'beritaa.html', imageSrc: 'https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg', altText: 'Image of three people in red shirts speaking at a microphone', description: 'Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).' },
-          { title: 'Penyanyi Sukses Dalam Berkarir, Ini Rahasinya', link: 'beritaa.html', imageSrc: 'https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg', altText: 'Image of a person singing on stage with red lighting', description: 'Sikembalinya serbuan militer, dapat diartikan sebagai kegiatan mempertegas hubungan antara militer dan situasi dengan kebrutalannya, seperti disaksikan DPRD.' },
-          { title: 'JEPANG PANIK BUYING', link: 'beritaa.html', imageSrc: 'https://storage.googleapis.com/a1aa/image/lSg9c5lESwJSGVSkWN5Tp2HjWjfZfOWbK8g5FPzxVNCk9tkTA.jpg', altText: 'Image of a person walking through rubble in Japan', description: 'Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat mempersembahkan lagu "Blue Giant". Tim bergegas perlahan ke belakang panggung.' },
-          { title: 'ISRAEL GEMPUR TEPI BARAT', link: 'beritaa.html', imageSrc: 'https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg', altText: 'Image of a street in Palestine with damaged buildings', description: 'Berhasil meluncurkan operasi militer besar-besaran sejak infeksi pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024) dari barat.' }
-        ];
-        
-        function each(array, callback) {
-          for (let i = 0; i < array.length; i++) callback(array[i], i);
-        }
-        
-        const newsGrid = document.getElementById('newsGrid');
-        each(newsData, function(news) {
-          const newsItem = `
-            <div class="news-item">
-              <a href="${news.link}">
-                <img src="${news.imageSrc}" alt="${news.altText}" height="200" width="250"/>
-                <h2>${news.title}</h2>
-              </a>
-              <p>${news.description}</p>
-            </div>
-          `;
-          newsGrid.innerHTML += newsItem;
-        });
+        h1 Home
+        .news-grid
+          .news-item
+            a(href="beritaa.html")
+              img(alt="Image of three people in red shirts speaking at a microphone", height="200", src="https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg", width="250")
+              h2 KPDIP: Pilkada Jakarta 2024 "not for sale"
+            p Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).
+          .news-item
+            a(href="beritaa.html")
+              img(alt="Image of a person singing on stage with red lighting", height="200", src="https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg", width="250")
+              h2 Penyanyi Sukses Dalam Berkarir, Ini Rahasinya
+            p Sikembalinya serbuan militer, dapat diartikan sebagai kegiatan mempertegas hubungan antara militer dan situasi dengan kebrutalannya, seperti disaksikan DPRD. Sikembalinya ini bertujuan untuk memperkuat serbuan dan mempercepat tali kekuasaan.
+          .news-item
+            a(href="beritaa.html")
+              img(alt="Image of a person walking through rubble in Japan", height="200", src="https://storage.googleapis.com/a1aa/image/lSg9c5lESwJSGVSkWN5Tp2HjWjfZfOWbK8g5FPzxVNCk9tkTA.jpg", width="250")
+              h2 JEPANG PANIK BUYING
+            p Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat mempersembahkan lagu "Blue Giant". Tim bergegas perlahan ke belakang panggung, diperkirakan ingin memastikan aksi.
+          .news-item
+            a(href="beritaa.html")
+              img(alt="Image of a street in Palestine with damaged buildings", height="200", src="https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg", width="250")
+              h2 ISRAEL GEMPUR TEPI BARAT
+            p Berhasil meluncurkan operasi militer besar-besaran sejak infeksi pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024) dari barat.
