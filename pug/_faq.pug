@@ -15,8 +15,6 @@ mixin faq()
         img.faq-icon(src="https://i.ibb.co.com/TgCHsHc/org.png" alt="FAQ Icon")
         h2 FAQ
 
-    //- FAQ items will be inserted here by JavaScript
-
     .faq-footer
       a(href="Redaksi.html")
         img.footer-icon(src="https://i.ibb.co.com/VJ8QJY3/download-3-removebg-preview.png" alt="Footer Icon")
@@ -31,7 +29,7 @@ mixin faq()
       const faqContainer = document.querySelector('.faq-container');
 
       faqData.forEach(faq => {
-        // Create FAQ item
+        
         const faqItem = document.createElement('div');
         faqItem.className = 'faq-item';
         faqItem.textContent = faq.question;
@@ -44,7 +42,7 @@ mixin faq()
           faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
         };
 
-        // Create FAQ content
+        
         const faqContent = document.createElement('div');
         faqContent.className = 'faq-content';
         faqContent.style.display = 'none';
@@ -55,7 +53,7 @@ mixin faq()
           faqContent.appendChild(answerParagraph);
         });
 
-        // Append to container
+        
         faqContainer.appendChild(faqItem);
         faqContainer.appendChild(faqContent);
       });
