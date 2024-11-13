@@ -5,42 +5,80 @@ mixin smart()
           p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
     .breadcrumbs
       .breadcrumb-item
-        a(href="#") Features >
+        a(href='#') Features >
       .breadcrumb-item
-        a(href="#") Smart Pop-Us
+        a(href='#') Smart And Pop-Us
+
     .main-image
-      a(href="https://ibb.co.com/cLmWJzV")
-        img(src="https://i.ibb.co.com/jRpCh7s/Screenshot-2024-10-23-142355.png", alt="Screenshot-2024-10-23-142355", border="0")
+      a(href='https://ibb.co.com/cLmWJzV')
+        img(src='https://i.ibb.co.com/jRpCh7s/Screenshot-2024-10-23-142355.png' alt='Screenshot-2024-10-23-142355' border='0')
+
     .content
       h1 SMART POP-US
       h2 Satu kode pendek: Kemungkinan tidak terbatas
       p "Smart Pop-up" adalah sebuah fitur antarmuka pengguna yang menampilkan jendela informasi (pop-up) secara otomatis, biasanya untuk menyampaikan pesan penting atau promosi tanpa mengganggu pengalaman utama pengguna. Fitur ini digunakan di berbagai situs web dan aplikasi untuk menarik perhatian pengguna secara efektif, seperti pada notifikasi berita, penawaran khusus, atau informasi peringatan.
-      ul Manfaat Smart Pop-up
+      ul
         li Komunikasi Efektif: Memungkinkan penyampaian pesan yang cepat dan langsung kepada pengguna.
         li Peningkatan Konversi: Efektif untuk mempromosikan penawaran, produk, atau layanan baru.
         li Personalisasi: Smart pop-up yang cerdas dapat disesuaikan dengan preferensi atau riwayat pengguna.
         li Penggunaan yang Mudah: Pop-up dapat dengan cepat dibuka atau ditutup oleh pengguna sesuai keinginan mereka, sehingga tidak terlalu mengganggu.
-    .features
-      .feature-item
-        img(src="https://storage.googleapis.com/a1aa/image/SZuvGejJUKzFVC9XkCU4LLjbIfeyfOYuob8jmEFSB8pJuLlOB.jpg", alt="Fly-out menus", height="100", width="100")
-        p Fly-out menus
-      .feature-item
-        img(src="https://storage.googleapis.com/a1aa/image/dwewP6AlKHRpHSwu8MrhwpM3ed52e07GM6MI0hSZxHyC3lSnA.jpg", alt="Subscriptions", height="100", width="100")
-        p Subscriptions
-      .feature-item
-        img(src="https://storage.googleapis.com/a1aa/image/X9LFRE6qmvr3FReZKsQDGgh9kM9Fsta80CFwnyX9QkSydp0JA.jpg", alt="Pop-up Ads", height="100", width="100")
-        p Pop-up Ads
-      .feature-item
-        img(src="https://storage.googleapis.com/a1aa/image/64pft4fgdgkSeIfAYh2u82QLPxJ1NcurRHe5qqMe6hro5uU6E.jpg", alt="Custom Pages", height="100", width="100")
-        p Custom Pages
-        .popup#popupBerita
-          h2 Breaking News
-          p Indonesia berhasil menorehkan prestasi di bidang teknologi! Klik untuk info lebih lanjut.
-          button.close-btn(onclick="closePopup()") Tutup
-        script.
-          window.onload = function() {
-              document.getElementById("popupBerita").style.display = "block";
-          };
-          function closePopup() {
-              document.getElementById("popupBerita").style.display = "none";
-          }
+
+    .features(id='features-container')
+
+    script.
+      const features = [
+        {
+          imgSrc: "https://storage.googleapis.com/a1aa/image/SZuvGejJUKzFVC9XkCU4LLjbIfeyfOYuob8jmEFSB8pJuLlOB.jpg",
+          alt: "Fly-out menus",
+          description: "Fly-out menus"
+        },
+        {
+          imgSrc: "https://storage.googleapis.com/a1aa/image/dwewP6AlKHRpHSwu8MrhwpM3ed52e07GM6MI0hSZxHyC3lSnA.jpg",
+          alt: "Subscriptions",
+          description: "Subscriptions"
+        },
+        {
+          imgSrc: "https://storage.googleapis.com/a1aa/image/X9LFRE6qmvr3FReZKsQDGgh9kM9Fsta80CFwnyX9QkSydp0JA.jpg",
+          alt: "Pop-up Ads",
+          description: "Pop-up Ads"
+        },
+        {
+          imgSrc: "https://storage.googleapis.com/a1aa/image/64pft4fgdgkSeIfAYh2u82QLPxJ1NcurRHe5qqMe6hro5uU6E.jpg",
+          alt: "Custom Pages",
+          description: "Custom Pages"
+        }
+      ];
+
+      const container = document.getElementById('features-container');
+    
+      features.forEach(feature => {
+        const featureItem = document.createElement('div');
+        featureItem.classList.add('feature-item');
+        
+        const img = document.createElement('img');
+        img.src = feature.imgSrc;
+        img.alt = feature.alt;
+        img.height = 100;
+        img.width = 100;
+        
+        const p = document.createElement('p');
+        p.textContent = feature.description;
+
+        featureItem.appendChild(img);
+        featureItem.appendChild(p);
+        
+        container.appendChild(featureItem);
+      });
+
+    .popup(id='popupBerita')
+      h2 Breaking News
+      p Indonesia berhasil menorehkan prestasi di bidang teknologi! Klik untuk info lebih lanjut.
+      button.close-btn(onclick='closePopup()') Tutup
+
+    script.
+      window.onload = function() {
+        document.getElementById("popupBerita").style.display = "block";
+      };
+      function closePopup() {
+        document.getElementById("popupBerita").style.display = "none";
+      };
