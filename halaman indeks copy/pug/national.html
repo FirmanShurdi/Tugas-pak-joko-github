@@ -1,49 +1,132 @@
-<html><head><title>News Page</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/><link rel="stylesheet" type="text/css" href="indeks_nasional.css"/></head><body><div class="header-content"><div class="marquee"><p>PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar negeri</p></div></div><header></header><div class="breadcrumbs"><div class="breadcrumb-item"><a href="#">Indeks ></a></div><div class="breadcrumb-item"><a href="#">National</a></div></div><div class="containers"><h1>Berita Nasional</h1><div class="news-grid" id="newsGrid"></div><script>const newsData = [
-  {
-    title: 'KPDIP: Pilkada Jakarta 2024 "not for sale"',
-    link: 'beritaa.html',
-    imageSrc: 'https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg',
-    altText: 'Image of three people in red shirts speaking at a microphone',
-    description: 'Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).'
-  },
-  {
-    title: 'Penyanyi Sukses Dalam Berkarir, Ini Rahasinya',
-    link: 'beritaa.html',
-    imageSrc: 'https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg',
-    altText: 'Image of a person singing on stage with red lighting',
-    description: 'Sikembalinya serbuan militer, dapat diartikan sebagai kegiatan mempertegas hubungan antara militer dan situasi dengan kebrutalannya, seperti disaksikan DPRD.'
-  },
-  {
-    title: 'JEPANG PANIK BUYING',
-    link: 'beritaa.html',
-    imageSrc: 'https://storage.googleapis.com/a1aa/image/lSg9c5lESwJSGVSkWN5Tp2HjWjfZfOWbK8g5FPzxVNCk9tkTA.jpg',
-    altText: 'Image of a person walking through rubble in Japan',
-    description: 'Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat mempersembahkan lagu "Blue Giant". Tim bergegas perlahan ke belakang panggung.'
-  },
-  {
-    title: 'ISRAEL GEMPUR TEPI BARAT',
-    link: 'beritaa.html',
-    imageSrc: 'https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg',
-    altText: 'Image of a street in Palestine with damaged buildings',
-    description: 'Berhasil meluncurkan operasi militer besar-besaran sejak infeksi pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024) dari barat.'
-  }
-];
 
-function each(array, callback) {
-  for (let i = 0; i < array.length; i++) callback(array[i], i);
-}
-
-const newsGrid = document.getElementById('newsGrid');
-each(newsData, function (news) {
-  const newsItem = `
-  <div class="news-item">
-    <a href="${news.link}">
-      <img src="${news.imageSrc}" alt="${news.altText}" height="200" width="250"/>
-      <h2>${news.title}</h2>
-    </a>
-    <p>${news.description}</p>
-  </div>
-  `;
-  newsGrid.innerHTML += newsItem;
-});
-</script><br/><br/><h2>Berita Terbaru</h2><div class="latest-news-item"><a href="beritaa.html"><img alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/C5Rv9Mc/IMG-20241112-065519-resize-43.jpg" width="150"/></a><div class="content"><a href="beritaa.html"><h3>Debat Publik Kedua Pilbup dan Wabup Sampang 2024: Simak Lokasi, Tema, dan Panelisnya</h3></a><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p></div></div><div class="latest-news-item"><a href="beritaa.html"><img alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/FWj2JTL/030461500-1731396323-Banner-Infografis-Menkeu-Pangkas-50-Persen-Anggaran-Perjalanan-Dinas-Kementeria.jpg" width="150"/></a><div class="content"><a href="beritaa.html"><h3>Infografis Menkeu Pangkas 50 Persen Anggaran Perjalanan Dinas Kementerian - Lembaga dan 7 Arahannya</h3></a><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p></div></div><div class="latest-news-item"><a href="beritaa.html"><img alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/72N3vjL/potensi-teh-putih-untuk-menjadi-ikon-teh-indonesia-169.jpg" width="150"/></a><div class="content"><a href="beritaa.html"><h3>Begini Proses Produksi Teh Putih yang Harganya Rp 1 Juta/Kg Baca artikel detikfinance, "Begini Proses Produksi Teh Putih yang Harganya Rp 1 Juta/Kg</h3></a><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p></div></div><div class="latest-news-item"><a href="beritaa.html"><img alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/ZM49CkZ/659154c30a020.jpg" width="150"/></a><div class="content"><a href="beritaa.html"><h3>Mempertaruhkan Kesejahteraan Kelas Menengah di Pasar Modal</h3></a><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p></div></div><div class="latest-news-item"><a href="beritaa.html"><img alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/Nxj9YpK/66a335a30683c.jpg" width="150"/></a><div class="content"><a href="beritaa.html"><h3>Gedung Layanan Estetika dan Operasi Plastik Rampung Dibangun di KEK Sanur</h3></a><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,</p></div></div></div></body></html>
+<html>
+  <head>
+    <title>News Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="indeks_nasional.css"/>
+  </head>
+  <body>
+    <div class="header-content">
+      <div class="marquee">
+        <p>PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar negeri</p>
+      </div>
+    </div>
+    <div class="breadcrumbs">
+      <div class="breadcrumb-item"><a href="#">Indeks ></a></div>
+      <div class="breadcrumb-item"><a href="#">National</a></div>
+    </div>
+    <div class="containers">
+      <h1>Berita Nasional</h1>
+      <div class="news-grid" id="newsGrid"></div>
+    </div>
+    <script>
+      const newsData = [
+        {
+          title: 'KPDIP: Pilkada Jakarta 2024 "not for sale"',
+          link: 'beritaa.html',
+          imageSrc: 'https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg',
+          altText: 'Image of three people in red shirts speaking at a microphone',
+          description: 'Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).'
+        },
+        {
+          title: 'Penyanyi Sukses Dalam Berkarir, Ini Rahasinya',
+          link: 'beritaa.html',
+          imageSrc: 'https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg',
+          altText: 'Image of a person singing on stage with red lighting',
+          description: 'Sikembalinya serbuan militer, dapat diartikan sebagai kegiatan mempertegas hubungan antara militer dan situasi dengan kebrutalannya, seperti disaksikan DPRD.'
+        },
+        {
+          title: 'JEPANG PANIK BUYING',
+          link: 'beritaa.html',
+          imageSrc: 'https://storage.googleapis.com/a1aa/image/lSg9c5lESwJSGVSkWN5Tp2HjWjfZfOWbK8g5FPzxVNCk9tkTA.jpg',
+          altText: 'Image of a person walking through rubble in Japan',
+          description: 'Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat mempersembahkan lagu "Blue Giant". Tim bergegas perlahan ke belakang panggung.'
+        },
+        {
+          title: 'ISRAEL GEMPUR TEPI BARAT',
+          link: 'beritaa.html',
+          imageSrc: 'https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg',
+          altText: 'Image of a street in Palestine with damaged buildings',
+          description: 'Berhasil meluncurkan operasi militer besar-besaran sejak infeksi pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024) dari barat.'
+        }
+      ];
+      
+      function each(array, callback) {
+        for (let i = 0; i < array.length; i++) callback(array[i], i);
+      }
+      
+      const newsGrid = document.getElementById('newsGrid');
+      each(newsData, function (news) {
+        const newsItem = `
+          <div class="news-item">
+            <a href="${news.link}">
+              <img src="${news.imageSrc}" alt="${news.altText}" height="200" width="250"/>
+              <h2>${news.title}</h2>
+            </a>
+            <p>${news.description}</p>
+          </div>
+        `;
+        newsGrid.innerHTML += newsItem;
+      });
+      
+    </script>
+    <h2>Berita Terbaru</h2>
+    <div id="news-container"></div>
+    <script>
+      const beritaTerbaru = [
+        {
+          href: "beritaa.html",
+          imgSrc: "https://i.ibb.co.com/C5Rv9Mc/IMG-20241112-065519-resize-43.jpg",
+          title: "Debat Publik Kedua Pilbup dan Wabup Sampang 2024: Simak Lokasi, Tema, dan Panelisnya",
+          description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
+        },
+        {
+          href: "beritaa.html",
+          imgSrc: "https://i.ibb.co.com/FWj2JTL/030461500-1731396323-Banner-Infografis-Menkeu-Pangkas-50-Persen-Anggaran-Perjalanan-Dinas-Kementeria.jpg",
+          title: "Infografis Menkeu Pangkas 50 Persen Anggaran Perjalanan Dinas Kementerian - Lembaga dan 7 Arahannya",
+          description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
+        },
+        {
+          href: "beritaa.html",
+          imgSrc: "https://i.ibb.co.com/72N3vjL/potensi-teh-putih-untuk-menjadi-ikon-teh-indonesia-169.jpg",
+          title: "Begini Proses Produksi Teh Putih yang Harganya Rp 1 Juta/Kg",
+          description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
+        },
+        {
+          href: "beritaa.html",
+          imgSrc: "https://i.ibb.co.com/ZM49CkZ/659154c30a020.jpg",
+          title: "Mempertaruhkan Kesejahteraan Kelas Menengah di Pasar Modal",
+          description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
+        },
+        {
+          href: "beritaa.html",
+          imgSrc: "https://i.ibb.co.com/Nxj9YpK/66a335a30683c.jpg",
+          title: "Gedung Layanan Estetika dan Operasi Plastik Rampung Dibangun di KEK Sanur",
+          description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
+        },
+        {
+          href: "beritaa.html",
+          imgSrc: "https://i.ibb.co.com/cLffH7z/65617b6ee4e41.jpg",
+          title: "Wall Street Merosot, Efek Pemilu AS Mulai Memudar?",
+          description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
+        }
+      ];
+      
+      let newsContainer = document.getElementById('news-container');
+      beritaTerbaru.forEach(berita => {
+        let newsItem = `
+          <div class="latest-news-item">
+            <a href="${berita.href}">
+              <img alt="Breaking news graphic" height="100" src="${berita.imgSrc}" width="150"/>
+            </a>
+            <div class="content">
+              <a href="${berita.href}"><h3>${berita.title}</h3></a>
+              <p>${berita.description}</p>
+            </div>
+          </div>
+        `;
+        newsContainer.innerHTML += newsItem;
+      });
+    </script>
+  </body>
+</html>
