@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDIP: Pilkada Jakarta 2024 "Not For Sale !!"</title>
+    <title>PDIP: Pilkada </title>
     <link rel="stylesheet" href="berita.css">
 </head>
 <body>
@@ -76,41 +76,47 @@
             <a href="page3.html" class="page-number">3</a>
         </div>
         <div class="containers">
-            <h1>Berita Terkini</h1>
-            <div class="news-grid">
-                <div class="news-item">
-                    <a href="jepang.html"
-                      ><img
-                        alt="Image of a person walking through rubble in Japan"
-                        height="200"
-                        src="https://i.ibb.co.com/rmzyyY5/Waswas-Warga-Jepang-Sampai-Panic-Buying-Karena-Peringatan-Gempa-Megaquake-1723609976.jpg"
-                        width="250"
-                      />
-                      <h2>JEPANG KRISIS PEMBELI</h2></a
-                    >
-                    <p>
-                      Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat
-                      mempersembahkan lagu "Blue Giant". Tim bergegas perlahan ke
-                      belakang panggung, diperkirakan ingin memastikan aksi.
-                    </p>
-                  </div>
-                  <div class="news-item">
-                    <a href="bupati.html"
-                      ><img
-                        alt="Image of a street in Palestine with damaged buildings"
-                        height="200"
-                        src="https://i.ibb.co.com/SRqXDvR/download-2.jpg"
-                        width="250"
-                      />
-                      <h2>ISRAEL GEMPUR TEPI BARAT</h2></a
-                    >
-                    <p>
-                      Berhasil meluncurkan operasi militer besar-besaran sejak infeksi
-                      pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024)
-                      dari barat.
-                    </p>
-                  </div>
-                </div>
-              </div>
-</body>
-</html>
+          <h1>Betia Terkini</h1>
+          <div class="news-grid" id="newsGrid"></div>
+        </div>
+      </main>
+  
+      <script>
+        const newsData = [
+
+          {
+            title: 'JEPANG PANIK BUYING',
+            link: 'beritaa.html',
+            imageSrc: 'https://i.ibb.co.com/rmzyyY5/Waswas-Warga-Jepang-Sampai-Panic-Buying-Karena-Peringatan-Gempa-Megaquake-1723609976.jpg',
+            altText: 'Image of a person walking through rubble in Japan',
+            description: 'Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat mempersembahkan lagu "Blue Giant". Tim bergegas perlahan ke belakang panggung.'
+          },
+          {
+            title: 'ISRAEL GEMPUR TEPI BARAT',
+            link: 'beritaa.html',
+            imageSrc: 'https://i.ibb.co.com/SRqXDvR/download-2.jpg',
+            altText: 'Image of a street in Palestine with damaged buildings',
+            description: 'Berhasil meluncurkan operasi militer besar-besaran sejak infeksi pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024) dari barat.'
+          }
+        ];
+  
+        function each(array, callback) {
+          for (let i = 0; i < array.length; i++) callback(array[i], i);
+        }
+  
+        const newsGrid = document.getElementById('newsGrid');
+        each(newsData, function (news) {
+          const newsItem = `
+            <div class="news-item">
+              <a href="${news.link}">
+                <img src="${news.imageSrc}" alt="${news.altText}" height="200" width="250"/>
+                <h2>${news.title}</h2>
+              </a>
+              <p>${news.description}</p>
+            </div>
+          `;
+          newsGrid.innerHTML += newsItem;
+        });
+      </script>
+    </body>
+  </html>
