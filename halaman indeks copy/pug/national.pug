@@ -49,40 +49,59 @@ html
           }
         ];
 
+        function each(array, callback) {
+          for (let i = 0; i < array.length; i++) callback(array[i], i);
+        }
+
         const newsGrid = document.getElementById('newsGrid');
-        newsData.forEach(function(news) {
+        each(newsData, function (news) {
           const newsItem = `
-            <div class="news-item">
-              <a href="${news.link}">
-                <img src="${news.imageSrc}" alt="${news.altText}" height="200" width="250"/>
-                <h2>${news.title}</h2>
-              </a>
-              <p>${news.description}</p>
-            </div>
+          <div class="news-item">
+            <a href="${news.link}">
+              <img src="${news.imageSrc}" alt="${news.altText}" height="200" width="250"/>
+              <h2>${news.title}</h2>
+            </a>
+            <p>${news.description}</p>
+          </div>
           `;
           newsGrid.innerHTML += newsItem;
         });
 
+      br
+      br
       h2 Berita Terbaru
-
-      each latest in [
-        {
-          link: 'beritaa.html',
-          imageSrc: 'https://i.ibb.co.com/C5Rv9Mc/IMG-20241112-065519-resize-43.jpg',
-          title: 'Debat Publik Kedua Pilbup dan Wabup Sampang 2024: Simak Lokasi, Tema, dan Panelisnya',
-          description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
-        },
-        {
-          link: 'beritaa.html',
-          imageSrc: 'https://i.ibb.co.com/FWj2JTL/030461500-1731396323-Banner-Infografis-Menkeu-Pangkas-50-Persen-Anggaran-Perjalanan-Dinas-Kementeria.jpg',
-          title: 'Infografis Menkeu Pangkas 50 Persen Anggaran Perjalanan Dinas Kementerian - Lembaga dan 7 Arahannya',
-          description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
-        }
-      ]
-        .latest-news-item
-          a(href=latest.link)
-            img(alt="Breaking news graphic" height="100" src=latest.imageSrc width="150")
-          .content
-            a(href=latest.link)
-              h3= latest.title
-            p= latest.description
+      .latest-news-item
+        a(href="beritaa.html")
+          img(alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/C5Rv9Mc/IMG-20241112-065519-resize-43.jpg" width="150")
+        .content
+          a(href="beritaa.html")
+            h3 Debat Publik Kedua Pilbup dan Wabup Sampang 2024: Simak Lokasi, Tema, dan Panelisnya
+          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      .latest-news-item
+        a(href="beritaa.html")
+          img(alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/FWj2JTL/030461500-1731396323-Banner-Infografis-Menkeu-Pangkas-50-Persen-Anggaran-Perjalanan-Dinas-Kementeria.jpg" width="150")
+        .content
+          a(href="beritaa.html")
+            h3 Infografis Menkeu Pangkas 50 Persen Anggaran Perjalanan Dinas Kementerian - Lembaga dan 7 Arahannya
+          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      .latest-news-item
+        a(href="beritaa.html")
+          img(alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/72N3vjL/potensi-teh-putih-untuk-menjadi-ikon-teh-indonesia-169.jpg" width="150")
+        .content
+          a(href="beritaa.html")
+            h3 Begini Proses Produksi Teh Putih yang Harganya Rp 1 Juta/Kg Baca artikel detikfinance, "Begini Proses Produksi Teh Putih yang Harganya Rp 1 Juta/Kg
+          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      .latest-news-item
+        a(href="beritaa.html")
+          img(alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/ZM49CkZ/659154c30a020.jpg" width="150")
+        .content
+          a(href="beritaa.html")
+            h3 Mempertaruhkan Kesejahteraan Kelas Menengah di Pasar Modal
+          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      .latest-news-item
+        a(href="beritaa.html")
+          img(alt="Breaking news graphic" height="100" src="https://i.ibb.co.com/Nxj9YpK/66a335a30683c.jpg" width="150")
+        .content
+          a(href="beritaa.html")
+            h3 Gedung Layanan Estetika dan Operasi Plastik Rampung Dibangun di KEK Sanur
+          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,

@@ -1,88 +1,70 @@
-html
+doctype html
+html(lang="id")
   head
-    title News Page
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
-    link(rel="stylesheet" type="text/css" href="indeks_nasional.css")
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Galeri
+    link(rel="stylesheet" href="indeks_galeri.css")
+
   body
-    .header-content
-      .marquee
-        p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
     header
+      .header-content
+        .marquee
+          p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
+
     .breadcrumbs
       .breadcrumb-item
-        a(href="#") Indeks >
+        a(href="#") Features >
       .breadcrumb-item
-        a(href="#") National
-    .containers
-      h1 Berita Nasional
-      .news-grid(id="newsGrid")
+        a(href="#") Cloud Library
 
-      script.
-        const newsData = [
-          {
-            title: 'KPDIP: Pilkada Jakarta 2024 "not for sale"',
-            link: 'beritaa.html',
-            imageSrc: 'https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg',
-            altText: 'Image of three people in red shirts speaking at a microphone',
-            description: 'Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).'
-          },
-          {
-            title: 'Penyanyi Sukses Dalam Berkarir, Ini Rahasinya',
-            link: 'beritaa.html',
-            imageSrc: 'https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg',
-            altText: 'Image of a person singing on stage with red lighting',
-            description: 'Sikembalinya serbuan militer, dapat diartikan sebagai kegiatan mempertegas hubungan antara militer dan situasi dengan kebrutalannya, seperti disaksikan DPRD.'
-          },
-          {
-            title: 'JEPANG PANIK BUYING',
-            link: 'beritaa.html',
-            imageSrc: 'https://storage.googleapis.com/a1aa/image/lSg9c5lESwJSGVSkWN5Tp2HjWjfZfOWbK8g5FPzxVNCk9tkTA.jpg',
-            altText: 'Image of a person walking through rubble in Japan',
-            description: 'Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat mempersembahkan lagu "Blue Giant". Tim bergegas perlahan ke belakang panggung.'
-          },
-          {
-            title: 'ISRAEL GEMPUR TEPI BARAT',
-            link: 'beritaa.html',
-            imageSrc: 'https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg',
-            altText: 'Image of a street in Palestine with damaged buildings',
-            description: 'Berhasil meluncurkan operasi militer besar-besaran sejak infeksi pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024) dari barat.'
-          }
-        ];
+    section.gallery
+      h1 Galeri
 
-        const newsGrid = document.getElementById('newsGrid');
-        newsData.forEach(function(news) {
-          const newsItem = `
-            <div class="news-item">
-              <a href="${news.link}">
-                <img src="${news.imageSrc}" alt="${news.altText}" height="200" width="250"/>
-                <h2>${news.title}</h2>
-              </a>
-              <p>${news.description}</p>
-            </div>
-          `;
-          newsGrid.innerHTML += newsItem;
-        });
+      h2.gambar Gambar
+      #gallery-images.gallery-images
 
-      h2 Berita Terbaru
+      h2 Video
+      #gallery-videos.gallery-videos
 
-      each latest in [
+    script.
+      const images = [
         {
-          link: 'beritaa.html',
-          imageSrc: 'https://i.ibb.co.com/C5Rv9Mc/IMG-20241112-065519-resize-43.jpg',
-          title: 'Debat Publik Kedua Pilbup dan Wabup Sampang 2024: Simak Lokasi, Tema, dan Panelisnya',
-          description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
+          src: "https://storage.googleapis.com/a1aa/image/kKYnk8P7saZVIlB9jkmNxeomIIiN9xOhCS7XkW7pQcNMap0JA.jpg",
+          alt: "Gambar 1"
         },
         {
-          link: 'beritaa.html',
-          imageSrc: 'https://i.ibb.co.com/FWj2JTL/030461500-1731396323-Banner-Infografis-Menkeu-Pangkas-50-Persen-Anggaran-Perjalanan-Dinas-Kementeria.jpg',
-          title: 'Infografis Menkeu Pangkas 50 Persen Anggaran Perjalanan Dinas Kementerian - Lembaga dan 7 Arahannya',
-          description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+          src: "https://i.ibb.co.com/SKzb6dV/depositphotos-151402814-stock-photo-business-team-celebrating-success.webp",
+          alt: "Gambar 2"
+        },
+        {
+          src: "https://storage.googleapis.com/a1aa/image/hi8s80J6TjbALFyysFVoIkIYhFeG6sR9pAzfbmSnjgcX0SpTA.jpg",
+          alt: "Gambar 3"
         }
-      ]
-        .latest-news-item
-          a(href=latest.link)
-            img(alt="Breaking news graphic" height="100" src=latest.imageSrc width="150")
-          .content
-            a(href=latest.link)
-              h3= latest.title
-            p= latest.description
+      ];
+
+      const videos = [
+        {
+          src: "mindset.mp4"
+        },
+        {
+          src: "TI.mp4"
+        }
+      ];
+
+      const galleryImagesContainer = document.getElementById("gallery-images");
+      images.forEach(image => {
+        galleryImagesContainer.innerHTML += `
+          <img src="${image.src}" alt="${image.alt}">
+        `;
+      });
+
+      const galleryVideosContainer = document.getElementById("gallery-videos");
+      videos.forEach(video => {
+        galleryVideosContainer.innerHTML += `
+          <video controls>
+            <source src="${video.src}" type="video/mp4">
+            Video tidak didukung oleh browser.
+          </video>
+        `;
+      });
