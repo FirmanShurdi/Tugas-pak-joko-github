@@ -1,30 +1,20 @@
-<html>
- <head>
-  <title>
-   Features &gt; Header and footer builder
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" type="text/css" href="features_header.css"/>
- </head>
- <body>
-    <header>
-        <div class="header-content">
-          <div class="marquee">
-            <p>
-              PensNews merupakan sebuah website yang menyediakan sebuah berita
-              hangat dan menarik yang terdapat didalam negeri maupun diluar
-              negeri
-            </p>
-          </div>
-        </div>
-      </header>
-    <div class="breadcrumbs">
-        <div class="breadcrumb-item"><a href="#">About US > </a></div>
-        <div class="breadcrumb-item"><a href="#">Kontak</a></div>
-    </div>
-    <div class="container5" id="container5"></div>
-
-    <script>
+mixin header()
+    header
+      .header-content
+        .marquee
+          p PensNews merupakan sebuah website yang menyediakan sebuah berita
+            hangat dan menarik yang terdapat didalam negeri maupun diluar
+            negeri
+    
+    .breadcrumbs
+      .breadcrumb-item
+        a(href="#") About US >
+      .breadcrumb-item
+        a(href="#") Kontak
+    
+    .container5(id="container5")
+    
+    script.
       // Data array yang berisi informasi gambar, judul, dan deskripsi untuk setiap section
       const sections = [
         {
@@ -80,7 +70,7 @@
     
         const description = document.createElement('div');
         description.classList.add('description');
-        description.innerHTML = section.description; 
+        description.innerHTML = section.description;
     
         sectionDiv.appendChild(img);
         sectionDiv.appendChild(title);
@@ -89,6 +79,6 @@
         container.appendChild(sectionDiv);
       });
     </script>
-    
- </body>
+
+</body>
 </html>

@@ -34,32 +34,54 @@
      </p>
     </div>
    </div>
-   <div class="features">
-    <div class="feature-item">
-     <img alt="Lock Content Restriction" height="100" src="https://storage.googleapis.com/a1aa/image/Bkft7Xl3ZKwjeELgv2jgoEwyOHZ3y6Sp0Ge6wzKV1cLu6lSnA.jpg" width="150"/>
-     <p>
-      LOCK CONTENT RESTRICTION
-     </p>
-    </div>
-    <div class="feature-item">
-     <img alt="Generate Leads" height="100" src="https://storage.googleapis.com/a1aa/image/qrJakGl30VKUKl1EQX8Veadr5I802jYM9ex5wdetUsu46lSnA.jpg" width="150"/>
-     <p>
-      GENERATE LEADS
-     </p>
-    </div>
-    <div class="feature-item">
-     <img alt="Unlimited Subscription" height="100" src="https://storage.googleapis.com/a1aa/image/gLl7ekf6hUmPOUKbFAH3NmmfMhlBuCE0G0xQDYTsiffUrXKdC.jpg" width="150"/>
-     <p>
-      UNLIMITED SUBSCRIPTION
-     </p>
-    </div>
-    <div class="feature-item">
-     <img alt="Membership" height="100" src="https://storage.googleapis.com/a1aa/image/dvCQgXD0cnrKEB2ByYCVs5mrR2sWF7pvmvCRoHAXGdJWvU6E.jpg" width="150"/>
-     <p>
-      MEMBERSHIP
-     </p>
-    </div>
-   </div>
+   <div class="features" id="features-container"></div>
+
+<script>
+  // Data array yang berisi informasi gambar dan deskripsi untuk setiap feature
+  const features = [
+    {
+      imgSrc: "https://storage.googleapis.com/a1aa/image/Bkft7Xl3ZKwjeELgv2jgoEwyOHZ3y6Sp0Ge6wzKV1cLu6lSnA.jpg",
+      alt: "Lock Content Restriction",
+      description: "LOCK CONTENT RESTRICTION"
+    },
+    {
+      imgSrc: "https://storage.googleapis.com/a1aa/image/qrJakGl30VKUKl1EQX8Veadr5I802jYM9ex5wdetUsu46lSnA.jpg",
+      alt: "Generate Leads",
+      description: "GENERATE LEADS"
+    },
+    {
+      imgSrc: "https://storage.googleapis.com/a1aa/image/gLl7ekf6hUmPOUKbFAH3NmmfMhlBuCE0G0xQDYTsiffUrXKdC.jpg",
+      alt: "Unlimited Subscription",
+      description: "UNLIMITED SUBSCRIPTION"
+    },
+    {
+      imgSrc: "https://storage.googleapis.com/a1aa/image/dvCQgXD0cnrKEB2ByYCVs5mrR2sWF7pvmvCRoHAXGdJWvU6E.jpg",
+      alt: "Membership",
+      description: "MEMBERSHIP"
+    }
+  ];
+
+  const container = document.getElementById('features-container');
+  
+  features.forEach(feature => {
+    const featureItem = document.createElement('div');
+    featureItem.classList.add('feature-item');
+    
+    const img = document.createElement('img');
+    img.src = feature.imgSrc;
+    img.alt = feature.alt;
+    img.width = 150;
+    img.height = 100;
+    
+    const p = document.createElement('p');
+    p.textContent = feature.description;
+
+    featureItem.appendChild(img);
+    featureItem.appendChild(p);
+
+    container.appendChild(featureItem);
+  });
+</script>
   </div>
  </body>
 </html>
