@@ -3,3 +3,9 @@ block rel
     link(rel="stylesheet" href="css/berita.css")
 block main
   +berita()
+  -const berData = [{img: "https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg", judul: "KPDIP: Pilkada Jakarta 2024 'not for sale'", text: "Hal ini menyusul deklarasi seluruh partai politik untuk mendukung bakal pasangan calon pada Pemilihan Gubernur dan Wakil Gubernur Jakarta. (27/9/24).", link: "beritaa.html" },{img: "https://i.ibb.co.com/SRqXDvR/download-2.jpg", judul: "JEPANG PANIK BUYING", text: "Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).", link: "beritaa.html" }]
+  .containers
+    h1 Berita Terkini    
+  .news-grid
+    each news in berData
+      +bercard(news.link, news.img, news.judul, news.text)

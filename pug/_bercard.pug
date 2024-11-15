@@ -1,0 +1,6 @@
+mixin bercard(link, img, judul, text )
+ .news-item
+    a(href=link)
+      img(src=img, alt=judul, height="200", width="250")
+      h2= judul
+    p= text

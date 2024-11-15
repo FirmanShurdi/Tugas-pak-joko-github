@@ -85,7 +85,7 @@ body {
     max-width: 800px;
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,7 +95,7 @@ body {
 
 h1 {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .gambar {

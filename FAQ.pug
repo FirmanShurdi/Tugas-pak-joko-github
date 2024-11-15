@@ -2,4 +2,23 @@ extends _template.pug
 block rel
     link(rel="stylesheet" href="css/faq.css")
 block main
-  +faq()
+  .header-content
+    .marquee
+      p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar  negeri
+  div.breadcrumbs
+    div.breadcrumb-item
+        a(href="#") About Us >
+    div.breadcrumb-item
+        a(href="#") FAQ
+  .faq-container
+    +faqcard('FAQ 1', ['Answer line 1', 'Answer line 2', 'Answer line 3'])
+    +faqcard('FAQ 2', ['Answer line 1', 'Answer line 2', 'Answer line 3'])
+    +faqcard('FAQ 2', ['Answer line 1', 'Answer line 2', 'Answer line 3'])
+  div.faq-footer
+    a(href="Redaksi.html")
+        img.footer-icon(src="https://i.ibb.co.com/VJ8QJY3/download-3-removebg-preview.png" alt="Footer Icon")
+  script.
+    function toggleFaqContent(faqItem) {
+        const faqContent = faqItem.nextElementSibling;
+        faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
+    }

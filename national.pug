@@ -2,4 +2,25 @@ extends _template.pug
 block rel
     link(rel="stylesheet" href="css/national.css")
 block main
-  +national()
+  .header-content
+    .marquee
+      p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar  negeri
+  div.breadcrumbs
+    div.breadcrumb-item
+        a(href="#") Indeks >
+    div.breadcrumb-item
+        a(href="#") National
+  -const natData = [{img: "https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg", judul: "KPDIP: Pilkada Jakarta 2024 'not for sale'", text: "Hal ini menyusul deklarasi seluruh partai politik untuk mendukung bakal pasangan calon pada Pemilihan Gubernur dan Wakil Gubernur Jakarta. (27/9/24).", link: "beritaa.html" },{img: "https://i.ibb.co.com/SRqXDvR/download-2.jpg", judul: "JEPANG PANIK BUYING", text: "Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).", link: "beritaa.html" },{img: "https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg", judul: "Penyanyi Sukses Dalam Berkarir, Ini Rahasinya", text: "Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).", link: "beritaa.html" },{img: "https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg", judul: "ISRAEL GEMPUR TEPI BARAT", text: "Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).", link: "beritaa.html" }]
+  .containers
+    h1 Home    
+  .news-grid
+    each news in natData
+      +natcard(news.link, news.img, news.judul, news.text)
+  h2 Berita Terbaru
+  .news-container
+  +NewsItem('beritaa.html', 'https://i.ibb.co.com/C5Rv9Mc/IMG-20241112-065519-resize-43.jpg', 'Breaking news graphic', 'Debat Publik Kedua Pilbup dan Wabup Sampang 2024: Simak Lokasi, Tema, dan Panelisnya', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...')
+  +NewsItem('beritaa.html', 'https://i.ibb.co.com/FWj2JTL/030461500-1731396323-Banner-Infografis-Menkeu-Pangkas-50-Persen-Anggaran-Perjalanan-Dinas-Kementeria.jpg', 'Breaking news graphic', 'Infografis Menkeu Pangkas 50 Persen Anggaran Perjalanan Dinas Kementerian - Lembaga dan 7 Arahannya', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...')
+  +NewsItem('beritaa.html', 'https://i.ibb.co.com/72N3vjL/potensi-teh-putih-untuk-menjadi-ikon-teh-indonesia-169.jpg', 'Breaking news graphic', 'Begini Proses Produksi Teh Putih yang Harganya Rp 1 Juta/Kg', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...')
+  +NewsItem('beritaa.html', 'https://i.ibb.co.com/ZM49CkZ/659154c30a020.jpg', 'Breaking news graphic', 'Mempertaruhkan Kesejahteraan Kelas Menengah di Pasar Modal', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...')
+  +NewsItem('beritaa.html', 'https://i.ibb.co.com/Nxj9YpK/66a335a30683c.jpg', 'Breaking news graphic', 'Gedung Layanan Estetika dan Operasi Plastik Rampung Dibangun di KEK Sanur', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...')
+  +NewsItem('beritaa.html', 'https://i.ibb.co.com/cLffH7z/65617b6ee4e41.jpg', 'Breaking news graphic', 'Wall Street Merosot, Efek Pemilu AS Mulai Memudar?', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...')
