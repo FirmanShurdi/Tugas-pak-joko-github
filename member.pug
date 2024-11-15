@@ -2,4 +2,44 @@ extends _template.pug
 block rel
     link(rel="stylesheet" href="css/member.css")
 block main
-  +member()
+  .header-content
+    .marquee
+      p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar  negeri
+  section.top-story
+  .breadcrumbs
+    .breadcrumb-item
+      a(href="#") Features >
+    .breadcrumb-item
+      a(href="#") Header And Builder
+  .main-content
+  img(
+    src="https://storage.googleapis.com/a1aa/image/dvdycY1S2c6mChO2Drw0sRhUX9x4CeWbmuJHGqXGGee26lSnA.jpg",
+    alt="Best WordPress Membership Plugins",
+    width="600",
+    height="300"
+  )
+  .text-content
+    h2 MEMBERSHIP
+    p Memilih plugin yang tepat sangat penting untuk bisnis keanggotaan Anda karena platform yang lebih baik berarti lebih banyak peluang pertumbuhan.
+    p Untungnya, kami telah membuat ini sangat mudah bagi Anda dengan menguji plugin keanggotaan paling populer dan memeriksa berbagai faktor seperti kemudahan penggunaan, fitur, opsi penyesuaian, dan harga.
+  .features
+  +featureItem(
+    "https://storage.googleapis.com/a1aa/image/Bkft7Xl3ZKwjeELgv2jgoEwyOHZ3y6Sp0Ge6wzKV1cLu6lSnA.jpg",
+    "Lock Content Restriction",
+    "LOCK CONTENT RESTRICTION"
+  )
+  +featureItem(
+    "https://storage.googleapis.com/a1aa/image/qrJakGl30VKUKl1EQX8Veadr5I802jYM9ex5wdetUsu46lSnA.jpg",
+    "Generate Leads",
+    "GENERATE LEADS"
+  )
+  +featureItem(
+    "https://storage.googleapis.com/a1aa/image/gLl7ekf6hUmPOUKbFAH3NmmfMhlBuCE0G0xQDYTsiffUrXKdC.jpg",
+    "Unlimited Subscription",
+    "UNLIMITED SUBSCRIPTION"
+  )
+  +featureItem(
+    "https://storage.googleapis.com/a1aa/image/dvCQgXD0cnrKEB2ByYCVs5mrR2sWF7pvmvCRoHAXGdJWvU6E.jpg",
+    "Membership",
+    "MEMBERSHIP"
+  )

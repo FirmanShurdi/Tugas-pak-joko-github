@@ -19,6 +19,7 @@ body {
     width: 100%;
     max-width: 600px;
     margin-bottom: 20px;
+    border-radius: 12px;
 }
 
 .section-title {
@@ -31,22 +32,24 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: relative;
-    border: 1px solid #ffffff;
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 15px;
-    transition: transform 0.2s ease;
-    box-shadow: 5px 8px 5px rgba(171, 164, 164, 0.2);
+    border-radius: 8px;
 }
-.image-row:hover{
+.image-row img:hover{
   transform: scale(1.02);
 }
 
 .image-row img {
     width: 100%;
     max-width: 200px;
+    border-radius: 8px;
     margin-bottom: 20px;
+    position: relative;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+    box-shadow: 5px 8px 5px rgba(171, 164, 164, 0.2);
 }
 .breadcrumbs {
     display: flex;
