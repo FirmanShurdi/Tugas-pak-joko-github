@@ -19,8 +19,16 @@ body {
     width: 100%;
     max-width: 600px;
     margin-bottom: 20px;
+    position: relative;
+    border: 1px solid #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
-
+.main-image:hover{
+  transform: scale(1.02);
+}
 .section-title {
     font-size: 18px;
     margin-bottom: 10px;
@@ -30,8 +38,16 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+    border: 1px solid #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
-
+.image-row:hover{
+  transform: scale(1.02);
+}
 .image-row img {
     width: 100%;
     max-width: 200px;
