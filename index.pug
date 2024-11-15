@@ -1,5 +1,23 @@
 extends _template.pug
-block rel
+include componen/_home.pug
+include componen/_homecard.pug
+
     link(rel="stylesheet" href="css/home.css")
 block main
-  +bodyhome()
+  .header-content
+    .marquee
+      p PensNews merupakan sebuah website yang menyediakan sebuah berita dan menarik yang terdapat didalam negeri maupun diluar negeri
+  .top-story
+    a(href="berita.html")
+      img(src="https://i.ibb.co.com/9n8Q3gx/gambar1.webp", alt="gambar1", class="main-image")
+    p
+      | Silaturahmi antar media dapat diartikan sebagai kegiatan mempererat hubungan
+      | antara media massa dengan mitra-mitranya, seperti Sekretariat DPRD
+    a(href="Berita.html") Selengkapnya...
+  .containers
+    h1 Home
+
+  -const newsData = [{img: "https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg", judul: "KPDIP: Pilkada Jakarta 2024 'not for sale'", text: "Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24)."},{img: "https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg", judul: "Penyanyi Sukses Dalam Berkarir, Ini Rahasinya", text: "Sikembalinya serbuan militer, dapat diartikan sebagai kegiatan mempertegas hubungan antara militer dan situasi dengan kebrutalannya, seperti disaksikan DPRD."},{ img: "https://storage.googleapis.com/a1aa/image/lSg9c5lESwJSGVSkWN5Tp2HjWjfZfOWbK8g5FPzxVNCk9tkTA.jpg", judul: "JEPANG PANIK BUYING", text: "Insiden ini terjadi saat Tim baru menyanyikan dua lagu, saat mempersembahkan lagu 'Blue Giant'. Tim bergegas perlahan ke belakang panggung." },{img: "https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg", judul: "ISRAEL GEMPUR TEPI BARAT", text: "Berhasil meluncurkan operasi militer besar-besaran sejak infeksi pada 2024, dan Zef Nazarik bersama pasukannya pada tahun (2024) dari barat." }];
+  .news-grid  
+    each news in newsData
+      +homecard(news.img, news.judul, news.text)
