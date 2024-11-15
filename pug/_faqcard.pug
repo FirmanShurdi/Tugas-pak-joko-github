@@ -1,0 +1,7 @@
+mixin faqcard(judul, answers)
+  .faq-item(onclick="toggleFaqContent(this)")
+    span= judul
+    span +
+  .faq-content
+    each answer in answers
+      p= answer

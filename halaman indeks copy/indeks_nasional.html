@@ -74,66 +74,61 @@
       });
     </script>
     <h2>Berita Terbaru</h2>
-    <div id="news-container"></div>
-    
-    <script>
-        const beritaTerbaru = [
-            {
-                href: "beritaa.html",
-                imgSrc: "https://i.ibb.co.com/C5Rv9Mc/IMG-20241112-065519-resize-43.jpg",
-                title: "Debat Publik Kedua Pilbup dan Wabup Sampang 2024: Simak Lokasi, Tema, dan Panelisnya",
-                description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
-            },
-            {
-                href: "beritaa.html",
-                imgSrc: "https://i.ibb.co.com/FWj2JTL/030461500-1731396323-Banner-Infografis-Menkeu-Pangkas-50-Persen-Anggaran-Perjalanan-Dinas-Kementeria.jpg",
-                title: "Infografis Menkeu Pangkas 50 Persen Anggaran Perjalanan Dinas Kementerian - Lembaga dan 7 Arahannya",
-                description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
-            },
-            {
-                href: "beritaa.html",
-                imgSrc: "https://i.ibb.co.com/72N3vjL/potensi-teh-putih-untuk-menjadi-ikon-teh-indonesia-169.jpg",
-                title: "Begini Proses Produksi Teh Putih yang Harganya Rp 1 Juta/Kg",
-                description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
-            },
-            {
-                href: "beritaa.html",
-                imgSrc: "https://i.ibb.co.com/ZM49CkZ/659154c30a020.jpg",
-                title: "Mempertaruhkan Kesejahteraan Kelas Menengah di Pasar Modal",
-                description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
-            },
-            {
-                href: "beritaa.html",
-                imgSrc: "https://i.ibb.co.com/Nxj9YpK/66a335a30683c.jpg",
-                title: "Gedung Layanan Estetika dan Operasi Plastik Rampung Dibangun di KEK Sanur",
-                description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
-            },
-            {
-                href: "beritaa.html",
-                imgSrc: "https://i.ibb.co.com/cLffH7z/65617b6ee4e41.jpg",
-                title: "Wall Street Merosot, Efek Pemilu AS Mulai Memudar?",
-                description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam..."
-            }
-        ];
-    
-        let newsContainer = document.getElementById('news-container');
-        beritaTerbaru.forEach(berita => {
-            let newsItem = `
-                <div class="latest-news-item">
-                    <a href="${berita.href}">
-                        <img alt="Breaking news graphic" height="100" src="${berita.imgSrc}" width="150"/>
-                    </a>
-                    <div class="content">
-                        <a href="${berita.href}"><h3>${berita.title}</h3></a>
-                        <p>${berita.description}</p>
-                    </div>
-                </div>
-            `;
-            newsContainer.innerHTML += newsItem;
-        });
-    </script>
-    
-   </div>
-  </div>
+    <div class="news-container">
+        <div class="latest-news-item">
+            <a href="beritaa.html">
+                <img alt="Breaking news graphic" src="https://i.ibb.co.com/C5Rv9Mc/IMG-20241112-065519-resize-43.jpg">
+            </a>
+            <div class="content">
+                <a href="beritaa.html"><h3>Debat Publik Kedua Pilbup dan Wabup Sampang 2024: Simak Lokasi, Tema, dan Panelisnya</h3></a>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</p>
+            </div>
+        </div>
+        <div class="latest-news-item">
+            <a href="beritaa.html">
+                <img alt="Breaking news graphic" src="https://i.ibb.co.com/FWj2JTL/030461500-1731396323-Banner-Infografis-Menkeu-Pangkas-50-Persen-Anggaran-Perjalanan-Dinas-Kementeria.jpg">
+            </a>
+            <div class="content">
+                <a href="beritaa.html"><h3>Infografis Menkeu Pangkas 50 Persen Anggaran Perjalanan Dinas Kementerian - Lembaga dan 7 Arahannya</h3></a>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</p>
+            </div>
+        </div>
+        <div class="latest-news-item">
+            <a href="beritaa.html">
+                <img alt="Breaking news graphic" src="https://i.ibb.co.com/72N3vjL/potensi-teh-putih-untuk-menjadi-ikon-teh-indonesia-169.jpg">
+            </a>
+            <div class="content">
+                <a href="beritaa.html"><h3>Begini Proses Produksi Teh Putih yang Harganya Rp 1 Juta/Kg</h3></a>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</p>
+            </div>
+        </div>
+        <div class="latest-news-item">
+            <a href="beritaa.html">
+                <img alt="Breaking news graphic" src="https://i.ibb.co.com/ZM49CkZ/659154c30a020.jpg">
+            </a>
+            <div class="content">
+                <a href="beritaa.html"><h3>Mempertaruhkan Kesejahteraan Kelas Menengah di Pasar Modal</h3></a>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</p>
+            </div>
+        </div>
+        <div class="latest-news-item">
+            <a href="beritaa.html">
+                <img alt="Breaking news graphic" src="https://i.ibb.co.com/Nxj9YpK/66a335a30683c.jpg">
+            </a>
+            <div class="content">
+                <a href="beritaa.html"><h3>Gedung Layanan Estetika dan Operasi Plastik Rampung Dibangun di KEK Sanur</h3></a>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</p>
+            </div>
+        </div>
+        <div class="latest-news-item">
+            <a href="beritaa.html">
+                <img alt="Breaking news graphic" src="https://i.ibb.co.com/cLffH7z/65617b6ee4e41.jpg">
+            </a>
+            <div class="content">
+                <a href="beritaa.html"><h3>Wall Street Merosot, Efek Pemilu AS Mulai Memudar?</h3></a>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</p>
+            </div>
+        </div>
+    </div>
  </body>
 </html>

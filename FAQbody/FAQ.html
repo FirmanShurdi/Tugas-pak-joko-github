@@ -29,48 +29,53 @@
             <img src="https://i.ibb.co.com/TgCHsHc/org.png" alt="FAQ Icon" class="faq-icon">
             <h2>FAQ</h2>
         </div>
-
-        <!-- FAQ items will be inserted here by JavaScript -->
     </div>
 
+    <div class="faq-container">
+        <div class="faq-item"
+        onclick="toggleFaqContent(this)">
+            FAQ 1
+            <span>+</span>
+        </div>
+        <div class="faq-content">
+            <p>Answer line 1</p>
+            <p>Answer line 2</p>
+            <p>Answer line 3</p>
+        </div>
+        
+        <div class="faq-item" 
+        onclick="toggleFaqContent(this)">
+            FAQ 2
+            <span>+</span>
+        </div>
+        <div class="faq-content">
+            <p>Answer line 1</p>
+            <p>Answer line 2</p>
+            <p>Answer line 3</p>
+        </div>
+    
+        <div class="faq-item" 
+        onclick="toggleFaqContent(this)">
+            FAQ 3
+            <span>+</span>
+        </div>
+        <div class="faq-content">
+            <p>Answer line 1</p>
+            <p>Answer line 2</p>
+            <p>Answer line 3</p>
+        </div>
+    </div>
+    
     <div class="faq-footer">
-        <a href="Redaksi.html"><img src="https://i.ibb.co.com/VJ8QJY3/download-3-removebg-preview.png" alt="Footer Icon" class="footer-icon"></a>
+        <a href="Redaksi.html">
+            <img src="https://i.ibb.co.com/VJ8QJY3/download-3-removebg-preview.png" alt="Footer Icon" class="footer-icon">
+        </a>
     </div>
     <script>
-        const faqData = [
-            { question: "FAQ 1", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
-            { question: "FAQ 2", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
-            { question: "FAQ 3", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
-        ];
-        const faqContainer = document.querySelector('.faq-container');
-        faqData.forEach(faq => {
-            const faqItem = document.createElement('div');
-            faqItem.className = 'faq-item';
-            faqItem.textContent = faq.question;
-
-            const toggleIcon = document.createElement('span');
-            toggleIcon.textContent = '+';
-            faqItem.appendChild(toggleIcon);
-
-            faqItem.onclick = () => {
-                faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
-            };
-
-            // Create FAQ content
-            const faqContent = document.createElement('div');
-            faqContent.className = 'faq-content';
-            faqContent.style.display = 'none';
-
-            faq.answers.forEach(answer => {
-                const answerParagraph = document.createElement('p');
-                answerParagraph.textContent = answer;
-                faqContent.appendChild(answerParagraph);
-            });
-
-            // Append to container
-            faqContainer.appendChild(faqItem);
-            faqContainer.appendChild(faqContent);
-        });
+        function toggleFaqContent(faqItem) {
+            const faqContent = faqItem.nextElementSibling;
+            faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
+        }
     </script>
 </body>
 </html>
