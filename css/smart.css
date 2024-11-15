@@ -47,6 +47,16 @@ body {
 .feature-item {
     margin: 0 20px;
     text-align: center;
+    position: relative;
+    border: 1px solid #ffffff;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+    box-shadow: 5px 8px 5px rgba(171, 164, 164, 0.2);
+}
+.feature-item:hover{
+  transform: scale(1.02);
 }
 .feature-item img {
     width: 100px;
