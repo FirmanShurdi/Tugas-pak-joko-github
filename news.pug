@@ -2,4 +2,19 @@ extends _template.pug
 block rel
     link(rel="stylesheet" href="css/news.css")
 block main
-  +news1()
+  
+  -const newsData = [{img: "https://storage.googleapis.com/a1aa/image/IXcxTPWXFuIVGtFDOU4DltXxekcb0bYBe0uUwSgvDWwFfeSOB.jpg", link: "beritaa.html", judul: "lol"}, {img: "https://storage.googleapis.com/a1aa/image/IXcxTPWXFuIVGtFDOU4DltXxekcb0bYBe0uUwSgvDWwFfeSOB.jpg", link: "beritaa.html", judul: "lol"}, {img: "https://storage.googleapis.com/a1aa/image/IXcxTPWXFuIVGtFDOU4DltXxekcb0bYBe0uUwSgvDWwFfeSOB.jpg", link: "beritaa.html", judul: "lol"}]
+  
+  .carousel
+    .carousel-inner
+      each news in newsData
+        +Newscard(news.link, news.img, news.judul)
+    +news()
+
+  -const homeData = [{img: "https://storage.googleapis.com/a1aa/image/1HkJofWZXSQxb6jffADIQRVcCmXt07Bjh8sI831qMamG7bJnA.jpg", judul: "KPDIP: Pilkada Jakarta 2024 'not for sale'", text: "Hal ini menyusul deklarasi seluruh partai politik untuk mendukung bakal pasangan calon pada Pemilihan Gubernur dan Wakil Gubernur Jakarta. (27/9/24).", link: "beritaa.html" },{img: "https://i.ibb.co.com/SRqXDvR/download-2.jpg", judul: "JEPANG PANIK BUYING", text: "Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).", link: "beritaa.html" },{img: "https://storage.googleapis.com/a1aa/image/M3KG5pebUflK3U8GanqHb6LsovDH8GstS4qIDUSmig7g9tkTA.jpg", judul: "Penyanyi Sukses Dalam Berkarir, Ini Rahasinya", text: "Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).", link: "beritaa.html" },{img: "https://storage.googleapis.com/a1aa/image/bYchiktSZ27zJxOKBOs2VYePk8iTMJeEZmZ3eAsJohPD7bJnA.jpg", judul: "ISRAEL GEMPUR TEPI BARAT", text: "Rumah Aceh berinisial AU (24) berupaya mengakhiri hidupnya. Aksinya dilakukan usai kapal Aceh kelas 2 berangkat dari pelabuhan Ulee Lheue menuju Sabang pada Sabtu (27/9/24).", link: "beritaa.html" }]
+
+  .containers
+    h1 Home    
+  .news-grid
+    each news in homeData
+      +homecard(news.link, news.img, news.judul, news.text)

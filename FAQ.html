@@ -6,7 +6,6 @@
     <title>PensNews - Berita</title>
     <link rel="stylesheet" href="css/faq.css" />
   </head>
-
   <body>
     <nav>
       <div class="logo">
@@ -31,8 +30,8 @@
             <li><a href="national.html">Ekonomi</a></li>
             <li><a href="national.html">Olahraga</a></li>
             <li><a href="national.html">Hiburan</a></li>
-            <li><a href="national.html">Galeri</a></li>
-          </ul>
+            <li><a href="galeri.html">Galeri</a></li>
+          </ul> 
         </li>
         <li class="dropdown">
           <a class="active" href="#">About Us &#9662;</a>
@@ -62,28 +61,42 @@
       </ul>
       <input type="text" placeholder="Search" />
     </nav>
-    <header>
-      <div class="header-content">
-        <div class="marquee">
-          <p>
-            PensNews merupakan sebuah website yang menyediakan sebuah berita
-            hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
-          </p>
-        </div>
+    <div class="header-content">
+      <div class="marquee">
+        <p>
+          PensNews merupakan sebuah website yang menyediakan sebuah berita
+          hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
+        </p>
       </div>
-    </header>
+    </div>
     <div class="breadcrumbs">
       <div class="breadcrumb-item"><a href="#">About Us ></a></div>
       <div class="breadcrumb-item"><a href="#">FAQ</a></div>
     </div>
     <div class="faq-container">
-      <div class="faq-header">
-        <img
-          class="faq-icon"
-          src="https://i.ibb.co.com/TgCHsHc/org.png"
-          alt="FAQ Icon"
-        />
-        <h2>FAQ</h2>
+      <div class="faq-item" onclick="toggleFaqContent(this)">
+        <span>FAQ 1</span><span>+</span>
+      </div>
+      <div class="faq-content">
+        <p>Answer line 1</p>
+        <p>Answer line 2</p>
+        <p>Answer line 3</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaqContent(this)">
+        <span>FAQ 2</span><span>+</span>
+      </div>
+      <div class="faq-content">
+        <p>Answer line 1</p>
+        <p>Answer line 2</p>
+        <p>Answer line 3</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaqContent(this)">
+        <span>FAQ 2</span><span>+</span>
+      </div>
+      <div class="faq-content">
+        <p>Answer line 1</p>
+        <p>Answer line 2</p>
+        <p>Answer line 3</p>
       </div>
     </div>
     <div class="faq-footer">
@@ -95,50 +108,11 @@
       /></a>
     </div>
     <script>
-      const faqData = [
-        {
-          question: "FAQ 1",
-          answers: ["Answer line 1", "Answer line 2", "Answer line 3"],
-        },
-        {
-          question: "FAQ 2",
-          answers: ["Answer line 1", "Answer line 2", "Answer line 3"],
-        },
-        {
-          question: "FAQ 3",
-          answers: ["Answer line 1", "Answer line 2", "Answer line 3"],
-        },
-      ];
-
-      const faqContainer = document.querySelector(".faq-container");
-
-      faqData.forEach((faq) => {
-        const faqItem = document.createElement("div");
-        faqItem.className = "faq-item";
-        faqItem.textContent = faq.question;
-
-        const toggleIcon = document.createElement("span");
-        toggleIcon.textContent = "+";
-        faqItem.appendChild(toggleIcon);
-
-        faqItem.onclick = () => {
-          faqContent.style.display =
-            faqContent.style.display === "block" ? "none" : "block";
-        };
-
-        const faqContent = document.createElement("div");
-        faqContent.className = "faq-content";
-        faqContent.style.display = "none";
-
-        faq.answers.forEach((answer) => {
-          const answerParagraph = document.createElement("p");
-          answerParagraph.textContent = answer;
-          faqContent.appendChild(answerParagraph);
-        });
-
-        faqContainer.appendChild(faqItem);
-        faqContainer.appendChild(faqContent);
-      });
+      function toggleFaqContent(faqItem) {
+        const faqContent = faqItem.nextElementSibling;
+        faqContent.style.display =
+          faqContent.style.display === "block" ? "none" : "block";
+      }
     </script>
     <div class="container">
       <div class="logo-section">

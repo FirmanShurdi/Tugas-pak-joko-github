@@ -2,4 +2,22 @@ extends _template.pug
 block rel
     link(rel="stylesheet" href="css/visimisi.css")
 block main
-  +visimisi()
+  - const sections = [
+      {
+        className: 'vision',
+        title: 'VISI',
+        src: 'https://storage.googleapis.com/a1aa/image/vWqSkHafol23QKJuPliHJaAJ20VLW0cfW5eWXIN3cArxglSnA.jpg',
+        altText: "Blue circle with an eye icon and the word 'Vision'",
+        content: '1. Memberikan akses informasi dan wawasan pada masyarakat. 2. Memberikan berita secara proporsional. 3. Mengembangkan pendidikan informasi yang mencerdaskan tanpa menyesatkan masyarakat sehingga terbentuk kepribadian bangsa yang lebih baik dengan tetap mengedepankan kaidah-kaidah jurnalisme positif sesuai dengan tata aturan perundang-undangan yang berlaku di Republik Indonesia.'
+      },
+      {
+        className: 'mission',
+        title: 'MISI',
+        src: 'https://storage.googleapis.com/a1aa/image/XoPK0fVV8MU3NacEPwJ7xnkyI9A4HApISd0ZuyRYng8MYp0JA.jpg',
+        altText: "Yellow circle with a rocket icon and the word 'Mission'",
+        content: 'Menjadi perusahaan media massa yang profesional dan terpercaya untuk membangun masyarakat yang lebih cerdas dan bijaksana dalam memahami dan menyikapi segala bentuk informasi dan perkembangan teknologi.'
+      }
+    ]
+
+  each section in sections
+    +Section(section.title, section.src, section.altText, section.content)

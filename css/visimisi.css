@@ -9,13 +9,6 @@ body {
     margin: 20px;
     font-size: 18px;
   }
-  .container1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    gap: 21rem;
-  }
   .container2 {
     display: flex;
     justify-content: center;
@@ -23,26 +16,33 @@ body {
     margin-top: 10px;
   }
   
-  .vision, .mission {
-    margin: 0 70px;
-  }
-  
-  .vision img, .mission img {
+  .vision img{
     width: 250px;
     height: 250px; 
+    border-radius: 10px;
   }
-  
+  .mission img{
+    width: 250px;
+    height: 250px; 
+    margin-top: 14px;
+    border-radius: 10px
+  }
   .title {
     font-size: 24px;
     font-weight: bold;
-    margin-top: 20px;
   }
-  
-  .description {
+  .vision p {
     font-size: 14px;
     text-align: justify;
+    margin: 22px;
+    text-align: center;
+  }
+  .mission p {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 180px;
     margin: 20px;
-    line-height: 1.5;
+    margin-top: 20px;
   }
   .marquee {
     right: 20px; 

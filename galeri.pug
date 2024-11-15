@@ -2,4 +2,23 @@ extends _template.pug
 block rel
     link(rel="stylesheet" href="css/galeri.css")
 block main
-  +galeri()
+  .header-content
+    .marquee
+      p PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar  negeri
+  div.breadcrumbs
+    div.breadcrumb-item
+        a(href="#") Indeks >
+    div.breadcrumb-item
+        a(href="#") National
+  section.gallery
+  h1 Galeri
+  h2.gambar Gambar
+  #gallery-images.gallery-images
+    +GalleryImage('https://storage.googleapis.com/a1aa/image/kKYnk8P7saZVIlB9jkmNxeomIIiN9xOhCS7XkW7pQcNMap0JA.jpg', 'Gambar 1')
+    +GalleryImage('https://i.ibb.co.com/SKzb6dV/depositphotos-151402814-stock-photo-business-team-celebrating-success.webp', 'Gambar 2')
+    +GalleryImage('https://storage.googleapis.com/a1aa/image/hi8s80J6TjbALFyysFVoIkIYhFeG6sR9pAzfbmSnjgcX0SpTA.jpg', 'Gambar 3')
+
+  h2 Video
+  #gallery-videos.gallery-videos
+    +GalleryVideo('mindset.mp4')
+    +GalleryVideo('TI.mp4')
