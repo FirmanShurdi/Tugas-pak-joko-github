@@ -1,0 +1,10 @@
+mixin section(imageSrc, imageAlt, title, description, features)
+  .container5
+    .section
+      img(src=imageSrc, alt=imageAlt, height="200", width="300")
+      .title= title
+      .description
+        p= description
+        ul
+          each feature in features
+            li= feature

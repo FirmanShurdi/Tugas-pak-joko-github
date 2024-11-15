@@ -26,53 +26,30 @@
     <div class="atas">
         <strong>Solusi Perpustakaan Modern di Era Digital</strong>
     </div>
-
+    
     <section class="intro">
         <h2>Apa Itu Cloud Library?</h2>
         <p>Cloud Library adalah perpustakaan digital yang memungkinkan akses mudah ke koleksi buku dan media lain melalui internet. Dengan teknologi cloud, Anda dapat mengakses berbagai materi kapan saja dan di mana saja.</p>
     </section>
-
-    <section class="features1"></section>
-
-    <script>
-        const features = [
-            {
-                imgSrc: "https://storage.googleapis.com/a1aa/image/OjaBDGF3FS5dMJtwnYA0xgewFUk9ePgvxcB0TvTnxefhKMlOB.jpg",
-                imgAlt: "Akses kapan saja",
-                title: "Akses Kapan Saja",
-                description: "Dengan Cloud Library, Anda bisa mengakses buku kapan saja, di mana saja, selama terhubung dengan internet."
-            },
-            {
-                imgSrc: "https://storage.googleapis.com/a1aa/image/uNDrh2Y0L3pLCV9ZyfersKY1tpg1ju8gwN9Bkdw8bdArCTpTA.jpg",
-                imgAlt: "Sinkronisasi",
-                title: "Sinkronisasi Antar Perangkat",
-                description: "Progres baca tersimpan otomatis dan bisa diakses dari berbagai perangkat."
-            },
-            {
-                imgSrc: "https://i.ibb.co.com/8sCRfgL/Sync-your-presets-new-feature-summary-pjpeg-jpeg-Size-200-wid-1000.webp",
-                imgAlt: "Pencarian Cepat",
-                title: "Pencarian Cepat",
-                description: "Temukan buku yang Anda cari dengan cepat menggunakan fitur pencarian canggih."
-            }
-        ];
     
-        const featuresSection = document.querySelector('.features1');
+    <section class="features1">
+        <div class="feature-item">
+            <img src="https://storage.googleapis.com/a1aa/image/OjaBDGF3FS5dMJtwnYA0xgewFUk9ePgvxcB0TvTnxefhKMlOB.jpg" alt="Akses kapan saja">
+            <h3>Akses Kapan Saja</h3>
+            <p>Dengan Cloud Library, Anda bisa mengakses buku kapan saja, di mana saja, selama terhubung dengan internet.</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://storage.googleapis.com/a1aa/image/uNDrh2Y0L3pLCV9ZyfersKY1tpg1ju8gwN9Bkdw8bdArCTpTA.jpg" alt="Sinkronisasi">
+            <h3>Sinkronisasi Antar Perangkat</h3>
+            <p>Progres baca tersimpan otomatis dan bisa diakses dari berbagai perangkat.</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://i.ibb.co.com/8sCRfgL/Sync-your-presets-new-feature-summary-pjpeg-jpeg-Size-200-wid-1000.webp" alt="Pencarian Cepat">
+            <h3>Pencarian Cepat</h3>
+            <p>Temukan buku yang Anda cari dengan cepat menggunakan fitur pencarian canggih.</p>
+        </div>
+    </section>
     
-        features.forEach(feature => {
-            const featureItem = document.createElement('div');
-            featureItem.classList.add('feature-item');
-    
-            featureItem.innerHTML = `
-                <img src="${feature.imgSrc}" alt="${feature.imgAlt}">
-                <h3>${feature.title}</h3>
-                <p>${feature.description}</p>
-            `;
-    
-            featuresSection.appendChild(featureItem);
-        });
-    </script>
-    
-
     <section class="benefits">
         <h2>Keuntungan Menggunakan Cloud Library</h2>
         <ul>
@@ -82,41 +59,23 @@
             <li>Fitur rekomendasi bacaan berdasarkan minat</li>
         </ul>
     </section>
-
+    
     <section class="testimonials">
         <h2>Testimoni Pengguna</h2>
-        <div id="testimonial-container"></div>
-    </section>
-    
-    <script>
-        const testimonials = [
-            {
-                text: "“Cloud Library sangat membantu saya dalam mengakses buku untuk riset. Sangat praktis dan mudah digunakan!”",
-                name: "Andi",
-                profession: "Mahasiswa"
-            },
-            {
-                text: "“Saya bisa melanjutkan bacaan di ponsel atau tablet tanpa kehilangan progres. Fitur sinkronisasi ini benar-benar luar biasa!”",
-                name: "Budi",
-                profession: "Pekerja Kantoran"
-            },
-            {
-                text: "“Pilihan bukunya lengkap dan tersedia kapan pun saya mau. Cloud Library adalah solusi cerdas untuk pencinta buku digital.”",
-                name: "Clara",
-                profession: "Pengusaha"
-            }
-        ];
-    
-        const testimonialContainer = document.getElementById("testimonial-container");
-    
-        testimonials.forEach(testimonial => {
-            testimonialContainer.innerHTML += `
-                <div class="testimonial-item">
-                    <p>${testimonial.text}</p>
-                    <span>- ${testimonial.name}, ${testimonial.profession}</span>
-                </div>
-            `;
-        });
-    </script>
+        <div id="testimonial-container">
+            <div class="testimonial-item">
+                <p>“Cloud Library sangat membantu saya dalam mengakses buku untuk riset. Sangat praktis dan mudah digunakan!”</p>
+                <span>- Andi, Mahasiswa</span>
+            </div>
+            <div class="testimonial-item">
+                <p>“Saya bisa melanjutkan bacaan di ponsel atau tablet tanpa kehilangan progres. Fitur sinkronisasi ini benar-benar luar biasa!”</p>
+                <span>- Budi, Pekerja Kantoran</span>
+            </div>
+            <div class="testimonial-item">
+                <p>“Pilihan bukunya lengkap dan tersedia kapan pun saya mau. Cloud Library adalah solusi cerdas untuk pencinta buku digital.”</p>
+                <span>- Clara, Pengusaha</span>
+            </div>
+        </div>
+    </section>    
 </body>
 </html>
