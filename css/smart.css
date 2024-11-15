@@ -22,8 +22,6 @@ body {
 .main-image img {
     width: 100%;
     margin-top: 30px;
-    border-radius: 8px;
-
 }
 .content {
     text-align: center;
@@ -49,16 +47,6 @@ body {
 .feature-item {
     margin: 0 20px;
     text-align: center;
-    position: relative;
-    border: 1px solid #ffffff;
-    padding: 15px;
-    border-radius: 15px;
-    transition: transform 0.2s ease;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
-.feature-item:hover{
-  transform: scale(1.02);
-
 }
 .feature-item img {
     width: 100px;

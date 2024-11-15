@@ -307,7 +307,7 @@ h2 {
 .containers {
   max-width: 1200px;
   margin: 0 auto;
-  margin-left: 50px;}
+}
 .top-story {
   display: flex;
   flex-direction: column;

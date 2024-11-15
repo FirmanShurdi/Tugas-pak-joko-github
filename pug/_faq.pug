@@ -18,3 +18,42 @@ mixin faq()
     .faq-footer
       a(href="Redaksi.html")
         img.footer-icon(src="https://i.ibb.co.com/VJ8QJY3/download-3-removebg-preview.png" alt="Footer Icon")
+
+    script.
+      const faqData = [
+        { question: "FAQ 1", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
+        { question: "FAQ 2", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] },
+        { question: "FAQ 3", answers: ["Answer line 1", "Answer line 2", "Answer line 3"] }
+      ];
+
+      const faqContainer = document.querySelector('.faq-container');
+
+      faqData.forEach(faq => {
+        
+        const faqItem = document.createElement('div');
+        faqItem.className = 'faq-item';
+        faqItem.textContent = faq.question;
+
+        const toggleIcon = document.createElement('span');
+        toggleIcon.textContent = '+';
+        faqItem.appendChild(toggleIcon);
+
+        faqItem.onclick = () => {
+          faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
+        };
+
+        
+        const faqContent = document.createElement('div');
+        faqContent.className = 'faq-content';
+        faqContent.style.display = 'none';
+
+        faq.answers.forEach(answer => {
+          const answerParagraph = document.createElement('p');
+          answerParagraph.textContent = answer;
+          faqContent.appendChild(answerParagraph);
+        });
+
+        
+        faqContainer.appendChild(faqItem);
+        faqContainer.appendChild(faqContent);
+      });
