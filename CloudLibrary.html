@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PensNews - Berita</title>
-    <link rel="stylesheet" href="css/cloud1.css" />
+    <link rel="stylesheet" href="css/cloud1.css">
   </head>
   <body>
     <nav>
-      <div class="logo">
-        <a href="index.html"
-          ><img
-            src="https://i.im.ge/2024/10/13/k6iPsr.logo.png"
-            alt="PensNews" /></a
-        ><span class="brand-name"
-          ><span class="pens">Pens</span><span class="news">News</span></span
-        >
-      </div>
+      <div class="logo"><a href="index.html"><img src="https://i.im.ge/2024/10/13/k6iPsr.logo.png" alt="PensNews"/></a><span class="brand-name"><span class="pens">Pens</span><span class="news">News</span></span></div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="news.html">News</a></li>
-        <li class="dropdown">
-          <a href="#">Indeks &#9662;</a>
+        <li class="dropdown"><a href="#">Indeks &#9662;</a>
           <ul class="dropdown-content">
             <li><a href="national.html">National</a></li>
             <li><a href="national.html">International</a></li>
@@ -33,8 +24,7 @@
             <li><a href="galeri.html">Galeri</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="#">About Us &#9662;</a>
+        <li class="dropdown"><a href="#">About Us &#9662;</a>
           <ul class="dropdown-content">
             <li><a href="kontak.html">Kontak</a></li>
             <li><a href="Redaksi.html">Redaksi</a></li>
@@ -47,8 +37,7 @@
             <li><a href="Disclaimer.html">Disclaimer</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a class="active" href="#">Features &#9662;</a>
+        <li class="dropdown"><a class="active" href="#">Features &#9662;</a>
           <ul class="dropdown-content">
             <li><a href="podcastsystem.html">Podcast System</a></li>
             <li><a href="SmartPopus.html">Smart Pop-Us</a></li>
@@ -59,74 +48,36 @@
           </ul>
         </li>
       </ul>
-      <input type="text" placeholder="Search" />
+      <input type="text" placeholder="Search"/>
     </nav>
-    <header>
-      <div class="header-content">
-        <div class="marquee">
-          <p>
-            PensNews merupakan sebuah website yang menyediakan sebuah berita
-            hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
-          </p>
-        </div>
+    <div class="header-content">
+      <div class="marquee">
+        <p>PensNews merupakan sebuah website yang menyediakan sebuah berita hangat dan menarik yang terdapat didalam negeri maupun diluar negeri</p>
       </div>
-    </header>
+    </div>
     <div class="breadcrumbs">
       <div class="breadcrumb-item"><a href="#">Features ></a></div>
       <div class="breadcrumb-item"><a href="#">Cloud Library</a></div>
     </div>
-    <div class="atas">
-      <strong>Solusi Perpustakaan Modern di Era Digital</strong>
-    </div>
+    <div class="atas"><strong>Solusi Perpustakaan Modern di Era Digital</strong></div>
     <section class="intro">
       <h2>Apa Itu Cloud Library?</h2>
-      <p>
-        Cloud Library adalah perpustakaan digital yang memungkinkan akses mudah
-        ke koleksi buku dan media lain melalui internet. Dengan teknologi cloud,
-        Anda dapat mengakses berbagai materi kapan saja dan di mana saja.
-      </p>
+      <p>Cloud Library adalah perpustakaan digital yang memungkinkan akses mudah ke koleksi buku dan media lain melalui internet. Dengan teknologi cloud, Anda dapat mengakses berbagai materi kapan saja dan di mana saja.</p>
     </section>
-    <section class="features1"></section>
-    <script>
-      const features = [
-        {
-          imgSrc:
-            "https://storage.googleapis.com/a1aa/image/OjaBDGF3FS5dMJtwnYA0xgewFUk9ePgvxcB0TvTnxefhKMlOB.jpg",
-          imgAlt: "Akses kapan saja",
-          title: "Akses Kapan Saja",
-          description:
-            "Dengan Cloud Library, Anda bisa mengakses buku kapan saja, di mana saja, selama terhubung dengan internet.",
-        },
-        {
-          imgSrc:
-            "https://storage.googleapis.com/a1aa/image/uNDrh2Y0L3pLCV9ZyfersKY1tpg1ju8gwN9Bkdw8bdArCTpTA.jpg",
-          imgAlt: "Sinkronisasi",
-          title: "Sinkronisasi Antar Perangkat",
-          description:
-            "Progres baca tersimpan otomatis dan bisa diakses dari berbagai perangkat.",
-        },
-        {
-          imgSrc:
-            "https://i.ibb.co.com/8sCRfgL/Sync-your-presets-new-feature-summary-pjpeg-jpeg-Size-200-wid-1000.webp",
-          imgAlt: "Pencarian Cepat",
-          title: "Pencarian Cepat",
-          description:
-            "Temukan buku yang Anda cari dengan cepat menggunakan fitur pencarian canggih.",
-        },
-      ];
-
-      const featuresSection = document.querySelector(".features1");
-      features.forEach((feature) => {
-        const featureItem = document.createElement("div");
-        featureItem.classList.add("feature-item");
-        featureItem.innerHTML = `
-    <img src="${feature.imgSrc}" alt="${feature.imgAlt}">
-    <h3>${feature.title}</h3>
-    <p>${feature.description}</p>
-  `;
-        featuresSection.appendChild(featureItem);
-      });
-    </script>
+    <section class="features1">
+      <div class="feature-item"><img src="https://storage.googleapis.com/a1aa/image/OjaBDGF3FS5dMJtwnYA0xgewFUk9ePgvxcB0TvTnxefhKMlOB.jpg" alt="Akses Kapan Saja"/>
+        <h3>Akses Kapan Saja</h3>
+        <p>Dengan Cloud Library, Anda bisa mengakses buku kapan saja, di mana saja, selama terhubung dengan internet.</p>
+      </div>
+      <div class="feature-item"><img src="https://storage.googleapis.com/a1aa/image/uNDrh2Y0L3pLCV9ZyfersKY1tpg1ju8gwN9Bkdw8bdArCTpTA.jpg" alt="Sinkronisasi Antar Perangkat"/>
+        <h3>Sinkronisasi Antar Perangkat</h3>
+        <p>Progres baca tersimpan otomatis dan bisa diakses dari berbagai perangkat.</p>
+      </div>
+      <div class="feature-item"><img src="https://i.ibb.co.com/8sCRfgL/Sync-your-presets-new-feature-summary-pjpeg-jpeg-Size-200-wid-1000.webp&quot;" alt="Pencarian Cepat"/>
+        <h3>Pencarian Cepat</h3>
+        <p>Temukan buku yang Anda cari dengan cepat menggunakan fitur pencarian canggih.</p>
+      </div>
+    </section>
     <section class="benefits">
       <h2>Keuntungan Menggunakan Cloud Library</h2>
       <ul>
@@ -138,68 +89,26 @@
     </section>
     <section class="testimonials">
       <h2>Testimoni Pengguna</h2>
-      <div id="testimonial-container"></div>
     </section>
-    <script>
-      const testimonials = [
-        {
-          text: "“Cloud Library sangat membantu saya dalam mengakses buku untuk riset. Sangat praktis dan mudah digunakan!”",
-          name: "Andi",
-          profession: "Mahasiswa",
-        },
-        {
-          text: "“Saya bisa melanjutkan bacaan di ponsel atau tablet tanpa kehilangan progres. Fitur sinkronisasi ini benar-benar luar biasa!”",
-          name: "Budi",
-          profession: "Pekerja Kantoran",
-        },
-        {
-          text: "“Pilihan bukunya lengkap dan tersedia kapan pun saya mau. Cloud Library adalah solusi cerdas untuk pencinta buku digital.”",
-          name: "Clara",
-          profession: "Pengusaha",
-        },
-      ];
-
-      const testimonialContainer = document.getElementById(
-        "testimonial-container"
-      );
-      testimonials.forEach((testimonial) => {
-        testimonialContainer.innerHTML += `
-    <div class="testimonial-item">
-      <p>${testimonial.text}</p>
-      <span>- ${testimonial.name}, ${testimonial.profession}</span>
+    <div id="testimonial-container">
+      <div class="testimonial-item">
+        <p>Cloud Library sangat membantu saya dalam mengakses buku untuk riset. Sangat praktis dan mudah digunakan!</p><span>- Andi, Mahasiswa</span>
+      </div>
+      <div class="testimonial-item">
+        <p>Saya bisa melanjutkan bacaan di ponsel atau tablet tanpa kehilangan progres. Fitur sinkronisasi ini benar-benar luar biasa!</p><span>- Budi, Pekerja Kantoran</span>
+      </div>
+      <div class="testimonial-item">
+        <p>Pilihan bukunya lengkap dan tersedia kapan pun saya mau. Cloud Library adalah solusi cerdas untuk pencinta buku digital.</p><span>- Clara, Pengusaha</span>
+      </div>
     </div>
-  `;
-      });
-    </script>
     <div class="container">
-      <div class="logo-section">
-        <a href="index.html"
-          ><img src="https://i.im.ge/2024/10/13/k6iPsr.logo.png" alt="PensNews"
-        /></a>
+      <div class="logo-section"><a href="index.html"><img src="https://i.im.ge/2024/10/13/k6iPsr.logo.png" alt="PensNews"/></a>
         <p>PensNews</p>
       </div>
       <div class="info-section">
         <div class="follow-us">
-            <h2 class="contact-title">FOLLOW US</h2>
-          <div class="social-links">
-            <a class="social-icon" href="https://facebook.com" target="_blank"
-              ><img
-                src="https://i.ibb.co.com/BNC3j28/facebook-removebg-preview.png"
-                alt="facebook" /></a
-            ><a class="social-icon" href="https://instagram.com" target="_blank"
-              ><img
-                src="https://i.ibb.co.com/BPKj2Ls/download-Photoroom.png"
-                alt="instagram" /></a
-            ><a class="social-icon" href="https://youtube.com" target="_blank"
-              ><img
-                src="https://i.ibb.co.com/3pdH1h8/download-1-Photoroom.png"
-                alt="youtube" /></a
-            ><a class="social-icon" href="https://whatsapp.com" target="_blank"
-              ><img
-                src="https://i.ibb.co.com/bsYZnWh/download-1-Photoroom-1.png"
-                alt="whatsapp"
-            /></a>
-          </div>
+          <h2 class="contact-title">FOLLOW US</h2>
+            <div class="social-links"><a class="social-icon" href="https://facebook.com" target="_blank"><img src="https://i.ibb.co.com/BNC3j28/facebook-removebg-preview.png" alt="facebook"/></a><a class="social-icon" href="https://instagram.com" target="_blank"><img src="https://i.ibb.co.com/BPKj2Ls/download-Photoroom.png" alt="instagram"/></a><a class="social-icon" href="https://youtube.com" target="_blank"><img src="https://i.ibb.co.com/3pdH1h8/download-1-Photoroom.png" alt="youtube"/></a><a class="social-icon" href="https://whatsapp.com" target="_blank"><img src="https://i.ibb.co.com/bsYZnWh/download-1-Photoroom-1.png" alt="whatsapp"/></a></div>
         </div>
         <div class="contact-us">
           <h2>CONTACT US</h2>

@@ -14,7 +14,6 @@ body {
     color: #000000;
     padding: 20px;
     text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
     font-size: 20px;
 }
 
@@ -46,7 +45,6 @@ header p {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .feature-item {
