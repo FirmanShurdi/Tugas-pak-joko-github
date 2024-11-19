@@ -61,15 +61,16 @@ body {
 .main-content {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin: 20px;
+    
 }
 .main-content img {
     width: 500px;
     height: auto;
 }
-.main-content .text-content {
+.text-content {
     width: 30%;
 }
 .main-content .text-content h2 {

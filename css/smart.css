@@ -35,6 +35,9 @@ body {
     font-size: 20px;
     margin: 10px 0;
 }
+ul{
+  list-style-type: none;
+}
 .content p {
     font-size: 16px;
     margin: 10px 0;
@@ -61,6 +64,7 @@ body {
 .feature-item img {
     width: 100px;
     height: 100px;
+    border-radius: 5px;
 }
 .feature-item p {
     font-size: 14px;
