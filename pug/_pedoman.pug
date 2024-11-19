@@ -1,34 +1,4 @@
-mixin pedoman()
-    .header-content
-      .marquee
-        p PensNews merupakan sebuah website yang menyediakan sebuah berita
-          hangat dan menarik yang terdapat didalam negeri maupun diluar negeri
-    .breadcrumbs
-      .breadcrumb-item
-        a(href='#') About >
-      .breadcrumb-item
-        a(href='#') Pedoman Berita
-    .content
-      .logo
-        a(href="https://imgbb.com/")
-          img(src="https://i.ibb.co.com/syFJppW/Screenshot-2024-11-06-140332.png", alt="Screenshot-2024-11-06-140332", border="0")
-      .text-content
-        ul
-          li
-            h2 PEDOMAN PEMBERITAAN
-            p Kemerdekaan berpandapat, kemerdekaan berekspresi, dan kemerdekaan pers adalah hak asasi manusia yang dilindungi Pancasila, Undang-Undang Dasar 1945, dan Deklarasi Universal Hak Asasi Manusia PBB. Kemerdekaan pers adalah sarana masyarakat untuk memperoleh informasi dan berkomunikasi; untuk meningkatkan kualitas kehidupan manusia. Dalam melaksanakan fungsi, hak, kewajiban, dan peranannya, pers menghormati hak asasi setiap orang, karena itu pers dituntut profesional dan terbuka untuk dikontrol oleh masyarakat.
-          li
-            h2 RUANG LINGKUP
-            p Media Siber adalah segala bentuk media yang menggunakan wahana internet dan melaksanakan kegiatan jurnalistik, serta memenuhi persyaratan Undang-Undang Pers dan Standar Perusahaan Pers yang ditetapkan Dewan Pers.
-          li
-            h2 VERIFIKASI DAN KEBERIMBANGAN BERITA
-            p Ketentuan dalam butir (a) di atas dikecualikan, dengan syarat:
-            br
-            1 berita benar-benar mengandung kepentingan publik yang bersifat mendesak;
-            br
-            2 Sumber berita yang pertama adalah sumber yang jelas disebutkan identitasnya, kredibel dan kompeten;
-            br
-            3 Subyek berita yang harus dikonfirmasi tidak diketahui keberadaannya dan atau tidak dapat diwawancarai;
-          li
-            h2 ISI BUATAN PENGGUNA
-            p Berita yang sudah dipublikasikan tidak dapat dicabut karena alasan penyensoran dari pihak luar redaksi, kecuali terkait masalah SARA, kesusilaan, masa depan anak, pengalaman traumatik korban atau berdasarkan pertimbangan khusus lain yang ditetapkan Dewan Pers.
+mixin GalleryItem(src, alt, title)
+  .gallery-item
+    img(src=src, alt=alt, width="300", height="400")
+    p #{title}
