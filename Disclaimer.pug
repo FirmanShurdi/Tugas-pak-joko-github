@@ -10,10 +10,10 @@ block main
       a(href="#") About Us >
     .breadcrumb-item
       a(href="#") Disclaimer
+  -const imagesData = [{ alt: "Padlock icon with blue signal waves", src: "https://storage.googleapis.com/a1aa/image/7kT8tr1Oet0hNKVMeWpRiY2T0EYfL0ekv8D6Tvh3gx5mgLlOB.jpg", width: "100", height: "100" },{ alt: "Red stamp with the word 'DISCLAIMER'", src: "https://storage.googleapis.com/a1aa/image/VTlT7RUE5Ya8EBR4tsc2JDaVpwVsk43WLXAuqfWUgtXDcp0JA.jpg", width: "100", height: "100" },{ alt: "Red warning sign with exclamation mark and the word 'IMPORTANT DISCLAIMER'", src: "https://storage.googleapis.com/a1aa/image/57khFF0s07aTAxnvhRD98eVm0nVsSxSXD0dCsgT4GfsH4SpTA.jpg", width: "100", height: "100" }]
   .images
-    +image("Padlock icon with blue signal waves", "https://storage.googleapis.com/a1aa/image/7kT8tr1Oet0hNKVMeWpRiY2T0EYfL0ekv8D6Tvh3gx5mgLlOB.jpg", "100", "100")
-    +image("Red stamp with the word 'DISCLAIMER'", "https://storage.googleapis.com/a1aa/image/VTlT7RUE5Ya8EBR4tsc2JDaVpwVsk43WLXAuqfWUgtXDcp0JA.jpg", "100", "100")
-    +image("Red warning sign with exclamation mark and the word 'IMPORTANT DISCLAIMER'", "https://storage.googleapis.com/a1aa/image/57khFF0s07aTAxnvhRD98eVm0nVsSxSXD0dCsgT4GfsH4SpTA.jpg", "100", "100")
+    each image in imagesData
+      +image(image.alt, image.src, image.width, image.height)
   .title Disclaimer
     .disclaimer-title DISCLAIMER PENSNEWS !!
     .disclaimer-text

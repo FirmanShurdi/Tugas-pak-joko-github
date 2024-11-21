@@ -19,20 +19,8 @@ block main
       src="https://storage.googleapis.com/a1aa/image/gQfM2qnU9eoCNkPizGSsWT3Yi7AqgCqO5SIVx1VSljyMflSnA.jpg",
       width="800"
   )
-  p Kami Merupakan Team Profesional fokus penuh pada layar komputer, menganalisis data dan informasi penting untuk membuat keputusan yang tepat. Dengan headset terpasang, terlihat dedikasi dan keterhubungan yang mendalam dengan pekerjaannya, siap merespons informasi baru kapan saja. Dikelilingi oleh tampilan dashboard interaktif yang penuh dengan grafik, diagram, dan visualisasi data, ia memanfaatkan teknologi modern untuk meningkatkan efektivitas dan produktivitas kerja secara maksimal.
+    p Kami Merupakan Team Profesional fokus penuh pada layar komputer, menganalisis data dan informasi penting untuk membuat keputusan yang tepat. Dengan headset terpasang, terlihat dedikasi dan keterhubungan yang mendalam dengan pekerjaannya, siap merespons informasi baru kapan saja. Dikelilingi oleh tampilan dashboard interaktif yang penuh dengan grafik, diagram, dan visualisasi data, ia memanfaatkan teknologi modern untuk meningkatkan efektivitas dan produktivitas kerja secara maksimal.
+  -const featureData = [{src: "https://storage.googleapis.com/a1aa/image/HAYbxbQHbXYZPxH88rRGIFMLIPJalGmScT9H9TeCn2VnfSpTA.jpg",alt: "Image showing a person working on a laptop",description: "Untuk pemula & profesional<br />Lebih dari 120.000+ pelanggan yang senang menggunakan kami. Gabungkan desain, kode, dan analitik dalam proyek Anda berikutnya. Anda juga harus mencobanya!"},{src: "https://storage.googleapis.com/a1aa/image/R1CkHybR86qGGFrwGZDR7mszUhgbbfuJQmXSwr5RhVeRflSnA.jpg",alt: "Image showing a frontend development illustration",description: "Bangun semuanya di frontend<br />Semua ide Anda siap menjadi kenyataan. Seret dan lepas elemen apa pun untuk membuat desain Anda tepat di bagian depan."},{src: "https://storage.googleapis.com/a1aa/image/aKRvAU4beVTIBi4TwBneuENnkSZAvHxlcuuG4Hqy2DPQflSnA.jpg",alt: "Image showing AI and IoT icons",description: "80+ kode pendek lengkap & kompleks<br />Pilih tema yang sempurna untuk setiap proyek Anda. Surat kabar memberi Anda 80+ kode pendek lengkap yang siap untuk disesuaikan!"}]
   .features
-    +featureItem(
-    "https://storage.googleapis.com/a1aa/image/HAYbxbQHbXYZPxH88rRGIFMLIPJalGmScT9H9TeCn2VnfSpTA.jpg",
-    "Image showing a person working on a laptop",
-    "Untuk pemula & profesional<br />Lebih dari 120.000+ pelanggan yang senang menggunakan kami. Gabungkan desain, kode, dan analitik dalam proyek Anda berikutnya. Anda juga harus mencobanya!"
-  )
-    +featureItem(
-    "https://storage.googleapis.com/a1aa/image/R1CkHybR86qGGFrwGZDR7mszUhgbbfuJQmXSwr5RhVeRflSnA.jpg",
-    "Image showing a frontend development illustration",
-    "Bangun semuanya di frontend<br />Semua ide Anda siap menjadi kenyataan. Seret dan lepas elemen apa pun untuk membuat desain Anda tepat di bagian depan."
-  )
-    +featureItem(
-    "https://storage.googleapis.com/a1aa/image/aKRvAU4beVTIBi4TwBneuENnkSZAvHxlcuuG4Hqy2DPQflSnA.jpg",
-    "Image showing AI and IoT icons",
-    "80+ kode pendek lengkap & kompleks<br />Pilih tema yang sempurna untuk setiap proyek Anda. Surat kabar memberi Anda 80+ kode pendek lengkap yang siap untuk disesuaikan!"
-  )
+    each feature in featureData
+      +live(feature.src, feature.alt, feature.description)

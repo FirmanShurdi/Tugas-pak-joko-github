@@ -2,3 +2,6 @@ mixin FeatureItem(image, altText, text)
   .feature-item
     img(src=image, alt=altText, height="100", width="100")
     p #{text}
+  .features
+    each feature in featurese
+      +FeatureItem(feature.src, feature.title, feature.description)

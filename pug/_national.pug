@@ -1,8 +1,6 @@
-mixin NewsItem(link, imgSrc, altText, judul, deskripsi)
+mixin NewsItem(link, img, alt, title, description)
   .latest-news-item
     a(href=link)
-      img(src=imgSrc, alt=altText)
-    .content
-      a(href=link)
-        h3= judul
-      p= deskripsi
+      img(src=img, alt=alt)
+      .news-title= title
+      .news-description= description
