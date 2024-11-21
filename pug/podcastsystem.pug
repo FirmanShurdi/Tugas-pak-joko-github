@@ -1,16 +1,2 @@
-mixin SectionWithImages(title, images)
-  .section
-    .section-title #{title}
-    +ImageRow(images)
-
-mixin ImageRow(images)
-  .image-row
-    each image in images
-      img(
-        src=image.src,
-        alt=image.alt,
-        width="200",
-        height="150"
-      )
-    each section in sections
-      +SectionWithImages(section.title, section.images)
+mixin ImageCard(src, alt)
+  img(src=src, alt=alt, width="200", height="150")
