@@ -9,16 +9,16 @@ block main
     div.breadcrumb-item
         a(href="#") Indeks >
     div.breadcrumb-item
-        a(href="#") National
+        a(href="#") Galeri
   section.gallery
   h1 Galeri
   h2.gambar Gambar
+  -const images = [{src: 'https://storage.googleapis.com/a1aa/image/kKYnk8P7saZVIlB9jkmNxeomIIiN9xOhCS7XkW7pQcNMap0JA.jpg', alt: 'Gambar 1'},{src: 'https://i.ibb.co.com/SKzb6dV/depositphotos-151402814-stock-photo-business-team-celebrating-success.webp', alt: 'Gambar 2'},{src: 'https://storage.googleapis.com/a1aa/image/hi8s80J6TjbALFyysFVoIkIYhFeG6sR9pAzfbmSnjgcX0SpTA.jpg', alt: 'Gambar 3'}]
   #gallery-images.gallery-images
-    +GalleryImage('https://storage.googleapis.com/a1aa/image/kKYnk8P7saZVIlB9jkmNxeomIIiN9xOhCS7XkW7pQcNMap0JA.jpg', 'Gambar 1')
-    +GalleryImage('https://i.ibb.co.com/SKzb6dV/depositphotos-151402814-stock-photo-business-team-celebrating-success.webp', 'Gambar 2')
-    +GalleryImage('https://storage.googleapis.com/a1aa/image/hi8s80J6TjbALFyysFVoIkIYhFeG6sR9pAzfbmSnjgcX0SpTA.jpg', 'Gambar 3')
-
+    each image in images
+      +GalleryImage(image.src, image.alt)
+  -const videos = ['halaman indeks copy/mindset.mp4','halaman indeks copy/TI.mp4']
   h2 Video
   #gallery-videos.gallery-videos
-    +GalleryVideo('mindset.mp4')
-    +GalleryVideo('TI.mp4')
+    each video in videos
+      +GalleryVideo(video)

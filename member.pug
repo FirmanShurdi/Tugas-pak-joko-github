@@ -22,24 +22,7 @@ block main
     h2 MEMBERSHIP
       p Memilih plugin yang tepat sangat penting untuk bisnis keanggotaan Anda karena platform yang lebih baik berarti lebih banyak peluang pertumbuhan.
       p Untungnya, kami telah membuat ini sangat mudah bagi Anda dengan menguji plugin keanggotaan paling populer dan memeriksa berbagai faktor seperti kemudahan penggunaan, fitur, opsi penyesuaian, dan harga.
+  -const featuresData = [{ src: "https://storage.googleapis.com/a1aa/image/Bkft7Xl3ZKwjeELgv2jgoEwyOHZ3y6Sp0Ge6wzKV1cLu6lSnA.jpg", title: "Lock Content Restriction", subtitle: "LOCK CONTENT RESTRICTION" },{ src: "https://storage.googleapis.com/a1aa/image/qrJakGl30VKUKl1EQX8Veadr5I802jYM9ex5wdetUsu46lSnA.jpg", title: "Generate Leads", subtitle: "GENERATE LEADS" },{ src: "https://storage.googleapis.com/a1aa/image/gLl7ekf6hUmPOUKbFAH3NmmfMhlBuCE0G0xQDYTsiffUrXKdC.jpg", title: "Unlimited Subscription", subtitle: "UNLIMITED SUBSCRIPTION" },{ src: "https://storage.googleapis.com/a1aa/image/dvCQgXD0cnrKEB2ByYCVs5mrR2sWF7pvmvCRoHAXGdJWvU6E.jpg", title: "Membership", subtitle: "MEMBERSHIP" }]
   .features
-    +featureItem(
-      "https://storage.googleapis.com/a1aa/image/Bkft7Xl3ZKwjeELgv2jgoEwyOHZ3y6Sp0Ge6wzKV1cLu6lSnA.jpg",
-      "Lock Content Restriction",
-      "LOCK CONTENT RESTRICTION"
-    )
-    +featureItem(
-      "https://storage.googleapis.com/a1aa/image/qrJakGl30VKUKl1EQX8Veadr5I802jYM9ex5wdetUsu46lSnA.jpg",
-      "Generate Leads",
-      "GENERATE LEADS"
-    )
-    +featureItem(
-      "https://storage.googleapis.com/a1aa/image/gLl7ekf6hUmPOUKbFAH3NmmfMhlBuCE0G0xQDYTsiffUrXKdC.jpg",
-      "Unlimited Subscription",
-      "UNLIMITED SUBSCRIPTION"
-    )
-    +featureItem(
-      "https://storage.googleapis.com/a1aa/image/dvCQgXD0cnrKEB2ByYCVs5mrR2sWF7pvmvCRoHAXGdJWvU6E.jpg",
-      "Membership",
-      "MEMBERSHIP"
-    )
+    each feature in featuresData
+      +featureItem(feature.src, feature.title, feature.subtitle)

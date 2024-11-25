@@ -1,4 +1,5 @@
-mixin featureItem(imageSrc, imageAlt, title)
+mixin featureItem(imageSrc, title, subtitle)
   .feature-item
-    img(src=imageSrc, alt=imageAlt, width="150", height="100")
-    p= title
+    img(src=imageSrc, alt=title, width="100", height="100")
+    .feature-title= title
+    .feature-subtitle= subtitle

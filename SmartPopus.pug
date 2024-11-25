@@ -2,6 +2,7 @@ extends _template.pug
 block rel
     link(rel="stylesheet" href="css/smart.css")
 block main
+  - const featurese = [{image: "https://storage.googleapis.com/a1aa/image/SZuvGejJUKzFVC9XkCU4LLjbIfeyfOYuob8jmEFSB8pJuLlOB.jpg", altText: "Fly-out menus", text: "Fly-out menus" },{ image: "https://storage.googleapis.com/a1aa/image/dwewP6AlKHRpHSwu8MrhwpM3ed52e07GM6MI0hSZxHyC3lSnA.jpg", altText: "Subscriptions", text: "Subscriptions" },{image: "https://storage.googleapis.com/a1aa/image/X9LFRE6qmvr3FReZKsQDGgh9kM9Fsta80CFwnyX9QkSydp0JA.jpg", altText: "Pop-up Ads", text: "Pop-up Ads" },{image: "https://storage.googleapis.com/a1aa/image/64pft4fgdgkSeIfAYh2u82QLPxJ1NcurRHe5qqMe6hro5uU6E.jpg", altText: "Custom Pages", text: "Custom Pages" }]
   header
   .header-content
     .marquee
@@ -28,11 +29,7 @@ block main
       li Personalisasi: Smart pop-up yang cerdas dapat disesuaikan dengan preferensi atau riwayat pengguna.
       li Penggunaan yang Mudah: Pop-up dapat dengan cepat dibuka atau ditutup oleh pengguna sesuai keinginan mereka, sehingga tidak terlalu mengganggu.
 
-  .features
-    +FeatureItem('https://storage.googleapis.com/a1aa/image/SZuvGejJUKzFVC9XkCU4LLjbIfeyfOYuob8jmEFSB8pJuLlOB.jpg', 'Fly-out menus', 'Fly-out menus')
-    +FeatureItem('https://storage.googleapis.com/a1aa/image/dwewP6AlKHRpHSwu8MrhwpM3ed52e07GM6MI0hSZxHyC3lSnA.jpg', 'Subscriptions', 'Subscriptions')
-    +FeatureItem('https://storage.googleapis.com/a1aa/image/X9LFRE6qmvr3FReZKsQDGgh9kM9Fsta80CFwnyX9QkSydp0JA.jpg', 'Pop-up Ads', 'Pop-up Ads')
-    +FeatureItem('https://storage.googleapis.com/a1aa/image/64pft4fgdgkSeIfAYh2u82QLPxJ1NcurRHe5qqMe6hro5uU6E.jpg', 'Custom Pages', 'Custom Pages')
+  -const features = [{ src: 'https://storage.googleapis.com/a1aa/image/SZuvGejJUKzFVC9XkCU4LLjbIfeyfOYuob8jmEFSB8pJuLlOB.jpg', title: 'Fly-out menus', description: 'Fly-out menus' },{ src: 'https://storage.googleapis.com/a1aa/image/dwewP6AlKHRpHSwu8MrhwpM3ed52e07GM6MI0hSZxHyC3lSnA.jpg', title: 'Subscriptions', description: 'Subscriptions' },{ src: 'https://storage.googleapis.com/a1aa/image/X9LFRE6qmvr3FReZKsQDGgh9kM9Fsta80CFwnyX9QkSydp0JA.jpg', title: 'Pop-up Ads', description: 'Pop-up Ads' },{ src: 'https://storage.googleapis.com/a1aa/image/64pft4fgdgkSeIfAYh2u82QLPxJ1NcurRHe5qqMe6hro5uU6E.jpg', title: 'Custom Pages', description: 'Custom Pages' }]
 
   .popup#popupBerita
     h2 Breaking News
