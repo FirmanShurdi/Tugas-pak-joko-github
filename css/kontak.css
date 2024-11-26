@@ -42,50 +42,57 @@ body {
 }
 
 .content {
+  margin-bottom: 20px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 20px;
+  justify-content: center;
 }
 
 .content img {
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
-.content .text {
-  max-width: 50%;
+.info-sections {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.content .text h1 {
-  font-size: 24px;
+.info-sections h2 {
+  font-size: 22px;
   color: #003366;
+  margin-bottom: 10px;
 }
 
-
-.info-section {
-  display: flex;
-  justify-content: space-around;
-  margin-left: 10px;
-}
-
-.info-section div {
-  max-width: 45%;
-}
-
-.info-section h2 {
-  font-size: 20px;
-  color: #003366;
-}
-
-.info-section ul {
+.info-sections ul {
   list-style-type: disc;
   padding-left: 20px;
 }
 
-.info-section ul li {
+.info-sections ul li {
   font-size: 16px;
+  line-height: 1.6;
+  color: #333;
 }
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .content img {
+    max-width: 100%;
+  }
+  .info-sections {
+    padding: 15px;
+  }
+}
+
 .headers {
   text-align: center;
   width: 100%;
@@ -373,7 +380,7 @@ h2 {
 
 .social-icon {
   display: inline-block;
-  width: 70px;
+  width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: #fff;
@@ -383,7 +390,7 @@ h2 {
   transition: transform 0.3s;
 }
 .social-icon:hover{
-   background-color: rgba(0, 0, 0, 0.285);
+  background-color: rgba(0, 0, 0, 0.285);
   transition: 0.5%;
 }
 .social-icon img {
